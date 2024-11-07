@@ -1,0 +1,55 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{tabularx}
+
+
+
+\newcommand{\cjboilerplate}[2]{
+	\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
+
+	\author{Nile Jocson}
+	\title{Exercise Solutions for #1\\{\large #2}}
+	\date{\today}
+
+	\maketitle{}
+		\pagebreak
+
+	\tableofcontents{}
+		\pagebreak
+}
+
+
+
+\newenvironment{cjsection}[1]
+{
+	\section{} #1
+}
+{
+	\pagebreak
+}
+
+\newcommand{\cjitem}[1]{\subsection{} #1 \\\\}
+\newcommand{\cjsubitem}[1]{\subsubsection{} #1 \\\\}
+
+
+
+\newcommand{\cjnext}[1]{\(\Rightarrow\) #1}
+
+\newcommand{\cjwhy}[2]{\hline \cjnext{#1} & #2 \\}
+\newcommand{\cjdep}[1]{\cjnext{#1} \\}
+
+\newcommand{\cjqed}{\(\blacksquare\)}
+
+\newenvironment{cjsolution}
+{
+	\tabularx{\textwidth}{| >{\raggedright\arraybackslash}X  >{\raggedleft\arraybackslash}X |}
+}
+{
+		& \cjqed{} \\
+		\hline
+	\endtabularx
+}

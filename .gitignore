@@ -3,3 +3,11 @@
 !/.gitignore
 !/LICENSE
 !/README.md
+
+!/common/
+!/common/cjmath.tex
+
+!/0/
+!/0/2/
+!/0/2/solution.pdf
+!/0/2/solution.tex
