@@ -1,6 +1,7 @@
 % SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
 % SPDX-License-Identifier: MPL-2.0
 
+\usepackage{adjustbox}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[a4paper, margin=1in]{geometry}
@@ -60,7 +61,7 @@
 \newcommand*{\cjcontinue}[1]{\(\Rightarrow\) #1 & \\}
 \newcommand*{\cjfa}[1]{\hline \(\Rightarrow\) #1 & Final answer. \\}
 \newcommand*{\cjfastep}[2]{\hline \(\Rightarrow\) #1 & Final answer. #2 \\}
-\newcommand{\cjsign}[1]{\hline & Create a table of signs. \\ \begin{tikzpicture}#1\end{tikzpicture} \\ \\}
+\newcommand{\cjsign}[1]{\hline & Create a table of signs. \\ \begin{adjustbox}{width=0.49\textwidth}\begin{tikzpicture}#1\end{tikzpicture}\end{adjustbox} \\ \\}
 
 \newcommand*{\cjqed}{\(\blacksquare\)}
 
