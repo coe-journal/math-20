@@ -90,5 +90,19 @@
 			\end{cjsolution}
 
 		\cjitem{\((\frac{x}{x + y} + \frac{y}{x - y}) \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
+			\begin{cjsolution}
+				\cjwhy{\((\frac{x(x - y)}{(x - y)(x + y)} + \frac{y(x + y)}{(x - y)(x + y)}) \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}{LCM \(= (x - y)(x + y)\)}
+				\cjcontinue{\(\frac{x(x - y) + y(x + y)}{(x - y)(x + y)} \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
+				\cjcontinue{\(\frac{x^2 - xy + xy + y^2}{(x - y)(x + y)} \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
+				\cjcontinue{\(\frac{x^2 + y^2}{(x - y)(x + y)} \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
+				\cjwhy{\(\frac{x^2 + y^2}{(x - y)(x + y)} \cdot \frac{x^2 - xy}{(x^2 - y^2)(x^2 + y^2)} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}{Factor using difference of two squares.}
+				\cjwhy{\(\frac{x^2 + y^2}{(x - y)(x + y)} \cdot \frac{x^2 - xy}{(x - y)(x + y)(x^2 + y^2)} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}{Factor using difference of two squares.}
+				\cjcontinue{\(\frac{x^2 + y^2}{(x - y)(x + y)} \cdot \frac{x(x - y)}{(x - y)(x + y)(x^2 + y^2)} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
+				\cjcontinue{\(\frac{x}{(x - y){(x + y)}^2} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
+				\cjwhy{\(\frac{x}{(x - y){(x + y)}^2} \cjdiv \frac{x}{{(x + y)}^2}\)}{Factor using perfect square trinomial.}
+				\cjwhy{\(\frac{x}{(x - y){(x + y)}^2} \cjdiv \frac{{(x + y)}^2}{x}\)}{\(a \cjdiv b = a \cdot \frac{1}{b}\)}
+				\cjcontinue{\(\frac{x}{(x - y){(x + y)}^2} \cdot \frac{{(x + y)}^2}{x}\)}
+				\cjcontinue{\(\frac{1}{x - y}\)}
+			\end{cjsolution}
 	\end{cjsection}
 \end{document}
