@@ -1,0 +1,30 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{Radicals and Complex Numbers}
+
+	\begin{cjsection}{Simplify the following. Rationalize the denominators.}
+		\cjitem{\(\frac{24c^{-\frac{1}{2}}d^{\frac{2}{3}}}{18c^{-\frac{1}{7}}d^{-\frac{3}{5}}}\)}
+			\begin{cjsolution}
+				\cjwhy{\(\frac{4c^{-\frac{1}{2}}d^{\frac{2}{3}}}{3c^{-\frac{1}{7}}d^{-\frac{3}{5}}}\)}{Simplify the fraction to lowest terms.}
+				\cjwhy{\(\frac{4d^{\frac{2}{3}}c^{\frac{1}{7}}d^{\frac{3}{5}}}{3c^{\frac{1}{2}}}\)}{\(a^{-\frac{b}{c}} = \frac{1}{a^\frac{b}{c}}\)}
+				\cjwhy{\(\frac{4d^{\frac{2}{3}}d^{\frac{3}{5}}}{3}c^{\frac{1}{7} - \frac{1}{2}}\)}{\(\frac{a^m}{a^n} = a^{m - n}\)}
+				\cjwhy{\(\frac{4d^{\frac{2}{3}}d^{\frac{3}{5}}}{3}c^{\frac{2}{14} - \frac{7}{14}}\)}{\(\text{LCM} = 14\)}
+				\cjcontinue{\(\frac{4d^{\frac{2}{3}}d^{\frac{3}{5}}}{3}c^{-\frac{5}{14}}\)}
+				\cjwhy{\(\frac{4}{3}c^{-\frac{5}{14}}d^{\frac{2}{3} + \frac{3}{5}}\)}{\(a^ma^n = a^{m + n}\)}
+				\cjwhy{\(\frac{4}{3}c^{-\frac{5}{14}}d^{\frac{10}{15} + \frac{9}{15}}\)}{\(\text{LCM} = 15\)}
+				\cjcontinue{\(\frac{4}{3}c^{-\frac{5}{14}}d^{\frac{19}{15}}\)}
+				\cjwhy{\(\frac{4d^{\frac{19}{15}}}{3c^{\frac{5}{14}}}\)}{\(a^{-\frac{b}{c}} = \frac{1}{a^\frac{b}{c}}\)}
+				\cjwhy{\(\frac{4\sqrt[15]{d^{19}}}{3\sqrt[14]{c^5}}\)}{Convert to roots.}
+				\cjwhy{\(\frac{4\sqrt[15]{d^{19}}}{3\sqrt[14]{c^5}} \cdot \frac{\sqrt[14]{c^9}}{\sqrt[14]{c^9}}\)}{Rationalize.}
+				\cjcontinue{\(\frac{4\sqrt[14]{c^9}\sqrt[15]{d^{19}}}{3c}\)}
+			\end{cjsolution}
+	\end{cjsection}
+\end{document}
