@@ -6,17 +6,21 @@
 \usepackage[a4paper, margin=1in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{physics}
-\usepackage{tabularx}
+\usepackage{tabularray}
 
 
 
 \renewcommand{\arraystretch}{1.75}
+\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
 
 
 
-\newcommand{\cjboilerplate}[2]{
-	\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
+\DefTblrTemplate{caption}{default}{}
+\DefTblrTemplate{capcont}{default}{}
 
+
+
+\newcommand*{\cjboilerplate}[2]{
 	\author{Nile Jocson \textless{}novoseiversia@gmail.com\textgreater{}}
 	\title{Exercise Solutions for #1\\{\large #2}}
 	\date{\today}
@@ -41,29 +45,34 @@
 	\pagebreak
 }
 
-\newcommand{\cjitem}[1]{\subsection{#1}}
-\newcommand{\cjsubitem}[1]{\subsubsection{#1}}
+\newcommand*{\cjitem}[1]{\subsection{#1}}
+\newcommand*{\cjsubitem}[1]{\subsubsection{#1}}
 
 
 
-\newcommand{\cjnext}[1]{\(\Rightarrow\) #1}
+\newcommand*{\cjwhy}[2]{\hline \(\Rightarrow\) #1 & #2 \\}
+\newcommand*{\cjsubwhy}[2]{\(\Rightarrow\) #1 & #2 \\}
+\newcommand*{\cjcontinue}[1]{\(\Rightarrow\) #1 & \\}
+\newcommand*{\cjfa}[1]{\hline \(\Rightarrow\) #1 & Final answer. \\}
+\newcommand*{\cjfastep}[2]{\hline \(\Rightarrow\) #1 & Final answer. #2 \\}
 
-\newcommand{\cjwhy}[2]{\hline \cjnext{#1} & #2 \\}
-\newcommand{\cjsubwhy}[2]{\cjnext{#1} & #2 \\}
-\newcommand{\cjcontinue}[1]{\cjnext{#1} & \\}
-\newcommand{\cjfa}[1]{\cjwhy{#1}{Final answer.}}
+\newcommand*{\cjqed}{\(\blacksquare\)}
 
-\newcommand{\cjqed}{\(\blacksquare\)}
-
-\newenvironment{cjsolution}
+\NewDocumentEnvironment{cjsolution}{+b}
 {
-	\tabularx{\textwidth}{| >{\raggedright\arraybackslash}X  >{\raggedleft\arraybackslash}X |}
-}
-{
+	\begin{longtblr}
+	[
+		expand = \cjwhy\cjsubwhy\cjcontinue\cjfa\cjfastep
+	]
+	{
+		colspec = {|lX[r]|},
+		width = \textwidth
+	}
+		#1
 		& \cjqed{} \\
 		\hline
-	\endtabularx
-}
+	\end{longtblr}
+}{}
 
 
 
