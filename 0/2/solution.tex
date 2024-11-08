@@ -14,24 +14,24 @@
 		\cjitem{\(16x^4 - 1\)}
 			\begin{cjsolution}
 				\cjwhy{\((4x^2 - 1)(4x^2 + 1)\)}{Factor using difference of two squares.}
-				\cjsubwhy{\((2x - 1)(2x + 1)(4x^2 + 1)\)}{Factor using difference of two squares.}
+				\cjfastep{\((2x - 1)(2x + 1)(4x^2 + 1)\)}{Factor using difference of two squares.}
 			\end{cjsolution}
 
 		\cjitem{\(8j^3 - 125k^6\)}
 			\begin{cjsolution}
-				\cjwhy{\((2j - 5k^2)(4j^2 + 10jk^2 + 25k^4)\)}{Factor using difference of two cubes.}
+				\cjfastep{\((2j - 5k^2)(4j^2 + 10jk^2 + 25k^4)\)}{Factor using difference of two cubes.}
 			\end{cjsolution}
 
 		\cjitem{\(s^2 + 7s + 10\)}
 			\begin{cjsolution}
-				\cjwhy{\((s + 2)(s + 5)\)}{Factor by grouping.}
+				\cjfastep{\((s + 2)(s + 5)\)}{Factor by grouping.}
 			\end{cjsolution}
 
 		\cjitem{\(4n^2 - 12n + 9\)}
 			\begin{cjsolution}
 				\cjwhy{\(4n^2 - 6n - 6n + 9\)}{Factor by grouping.}
 				\cjcontinue{\(2n(2n - 3) - 3(2n - 3)\)}
-				\cjcontinue{\({(2n - 3)}^2\)}
+				\cjfa{\({(2n - 3)}^2\)}
 			\end{cjsolution}
 
 		\cjitem{\(x^3 - x^2 - x + 1\)}
@@ -39,14 +39,14 @@
 				\cjwhy{\(x^2(x - 1) - 1(x - 1)\)}{Factor by grouping.}
 				\cjcontinue{\((x^2 - 1)(x - 1)\)}
 				\cjsubwhy{\((x - 1)(x + 1)(x - 1)\)}{Factor using difference of two squares.}
-				\cjcontinue{\({(x - 1)}^2(x + 1)\)}
+				\cjfa{\({(x - 1)}^2(x + 1)\)}
 			\end{cjsolution}
 
 		\cjitem{\(48 - 13q - q^2\)}
 			\begin{cjsolution}
 				\cjwhy{\(-q^2 - 13q + 48\)}{Rewrite in standard form.}
 				\cjcontinue{\(-(q^2 + 13q - 48)\)}
-				\cjsubwhy{\(-(q - 3)(q + 16)\)}{Factor by grouping.}
+				\cjfastep{\(-(q - 3)(q + 16)\)}{Factor by grouping.}
 			\end{cjsolution}
 	\end{cjsection}
 
@@ -57,7 +57,7 @@
 			\begin{cjsolution}
 				\cjwhy{\(\frac{(a - b)(a + b)}{a^3 - b^3}\)}{Factor using difference of two squares.}
 				\cjsubwhy{\(\frac{(a - b)(a + b)}{(a - b)(a^2 + ab + b^2)}\)}{Factor using difference of two cubes.}
-				\cjcontinue{\(\frac{a + b}{a^2 + ab + b^2}\)}
+				\cjfa{\(\frac{a + b}{a^2 + ab + b^2}\)}
 			\end{cjsolution}
 
 		\cjitem{\(\frac{x^3 - x^2y + xy^2 - y^3}{x^6 + y^6}\)}
@@ -65,7 +65,7 @@
 				\cjwhy{\(\frac{x^2(x - y) + y^2(x - y)}{x^6 + y^6}\)}{Factor by grouping.}
 				\cjcontinue{\(\frac{(x^2 + y^2)(x - y)}{x^6 + y^6}\)}
 				\cjsubwhy{\(\frac{(x^2 + y^2)(x - y)}{(x^2 + y^2)(x^4 - x^2y^2 2+ y^4)}\)}{Factor using difference of two cubes.}
-				\cjcontinue{\(\frac{x - y}{x^4 - x^2y^2 + y^4}\)}
+				\cjfa{\(\frac{x - y}{x^4 - x^2y^2 + y^4}\)}
 			\end{cjsolution}
 	\end{cjsection}
 
@@ -75,7 +75,7 @@
 		\cjitem{\((\frac{x}{x^2 - 1} - \frac{3}{x + 1}) \cjdiv \frac{2x^2 - x - 3}{x^3 - 1}\)}
 			\begin{cjsolution}
 				\cjwhy{\((\frac{x}{(x - 1)(x + 1)} - \frac{3}{x + 1}) \cjdiv \frac{2x^2 - x - 3}{x^3 - 1}\)}{Factor using difference of two squares.}
-				\cjsubwhy{\((\frac{x}{(x - 1)(x + 1)} - \frac{3(x - 1)}{(x - 1)(x + 1)}) \cjdiv \frac{2x^2 - x - 3}{x^3 - 1}\)}{\(\text{LCM} = (x - 1)(x + 1)\)}
+				\cjsubwhy{\((\frac{x}{(x - 1)(x + 1)} - \frac{3(x - 1)}{(x - 1)(x + 1)}) \cjdiv \frac{2x^2 - x - 3}{x^3 - 1}\)}{LCM = \((x - 1)(x + 1)\)}
 				\cjcontinue{\(\frac{x - 3(x - 1)}{(x - 1)(x + 1)} \cjdiv \frac{2x^2 - x - 3}{x^3 - 1}\)}
 				\cjcontinue{\(\frac{x - 3x + 3}{(x - 1)(x + 1)} \cjdiv \frac{2x^2 - x - 3}{x^3 - 1}\)}
 				\cjcontinue{\(\frac{-2x + 3}{(x - 1)(x + 1)} \cjdiv \frac{2x^2 - x - 3}{x^3 - 1}\)}
@@ -86,12 +86,12 @@
 				\cjsubwhy{\(\frac{-2x + 3}{(x - 1)(x + 1)} \cdot \frac{(x - 1)(x^2 + x + 1)}{(2x - 3)(x + 1)}\)}{\(a \cjdiv b = a \cdot \frac{1}{b}\)}
 				\cjcontinue{\(\frac{(-2x + 3)(x^2 + x + 1)}{(2x - 3){(x + 1)}^2}\)}
 				\cjcontinue{\(\frac{-(2x - 3)(x^2 + x + 1)}{(2x - 3){(x + 1)}^2}\)}
-				\cjcontinue{\(-\frac{x^2 + x + 1}{{(x + 1)}^2}\)}
+				\cjfa{\(-\frac{x^2 + x + 1}{{(x + 1)}^2}\)}
 			\end{cjsolution}
 
 		\cjitem{\((\frac{x}{x + y} + \frac{y}{x - y}) \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
 			\begin{cjsolution}
-				\cjwhy{\((\frac{x(x - y)}{(x - y)(x + y)} + \frac{y(x + y)}{(x - y)(x + y)}) \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}{\(\text{LCM} = (x - y)(x + y)\)}
+				\cjwhy{\((\frac{x(x - y)}{(x - y)(x + y)} + \frac{y(x + y)}{(x - y)(x + y)}) \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}{LCM = \((x - y)(x + y)\)}
 				\cjcontinue{\(\frac{x(x - y) + y(x + y)}{(x - y)(x + y)} \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
 				\cjcontinue{\(\frac{x^2 - xy + xy + y^2}{(x - y)(x + y)} \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
 				\cjcontinue{\(\frac{x^2 + y^2}{(x - y)(x + y)} \cdot \frac{x^2 - xy}{x^4 - y^4} \cjdiv \frac{x}{x^2 + 2xy + y^2}\)}
@@ -102,19 +102,19 @@
 				\cjsubwhy{\(\frac{x}{(x - y){(x + y)}^2} \cjdiv \frac{x}{{(x + y)}^2}\)}{Factor using perfect square trinomial.}
 				\cjsubwhy{\(\frac{x}{(x - y){(x + y)}^2} \cjdiv \frac{{(x + y)}^2}{x}\)}{\(a \cjdiv b = a \cdot \frac{1}{b}\)}
 				\cjcontinue{\(\frac{x}{(x - y){(x + y)}^2} \cdot \frac{{(x + y)}^2}{x}\)}
-				\cjcontinue{\(\frac{1}{x - y}\)}
+				\cjfa{\(\frac{1}{x - y}\)}
 			\end{cjsolution}
 
 		\cjitem{\(\frac{\frac{3}{p + q} + \frac{1}{p - 2q}}{1 + \frac{p - q}{p - 2q}}\)}
 			\begin{cjsolution}
-				\cjwhy{\(\frac{\frac{3(p - 2q)}{(p + q)(p - 2q)} + \frac{p + q}{(p + q)(p - 2q)}}{1 + \frac{p - q}{p - 2q}}\)}{\(\text{LCM} = (p + q)(p - 2q)\)}
+				\cjwhy{\(\frac{\frac{3(p - 2q)}{(p + q)(p - 2q)} + \frac{p + q}{(p + q)(p - 2q)}}{1 + \frac{p - q}{p - 2q}}\)}{LCM = \((p + q)(p - 2q)\)}
 				\cjcontinue{\(\frac{\frac{3(p - 2q) + p + q}{(p + q)(p - 2q)}}{1 + \frac{p - q}{p - 2q}}\)}
 				\cjcontinue{\(\frac{\frac{4p - 5q}{(p + q)(p - 2q)}}{1 + \frac{p - q}{p - 2q}}\)}
 				\cjcontinue{\(\frac{\frac{4p - 5q}{(p + q)(p - 2q)}}{\frac{p - 2q}{p - 2q} + \frac{p - q}{p - 2q}}\)}
 				\cjcontinue{\(\frac{\frac{4p - 5q}{(p + q)(p - 2q)}}{\frac{p - 2q + p - q}{p - 2q}}\)}
 				\cjcontinue{\(\frac{\frac{4p - 5q}{(p + q)(p - 2q)}}{\frac{2p - 3q}{p - 2q}}\)}
 				\cjsubwhy{\(\frac{4p - 5q}{(p + q)(p - 2q)} \cdot \frac{p - 2q}{2p - 3q}\)}{\(a \cjdiv b = a \cdot \frac{1}{b}\)}
-				\cjcontinue{\(\frac{4p - 5q}{(p + q)(2p - 3q)}\)}
+				\cjfa{\(\frac{4p - 5q}{(p + q)(2p - 3q)}\)}
 			\end{cjsolution}
 	\end{cjsection}
 \end{document}
