@@ -7,6 +7,8 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{physics}
 \usepackage{tabularray}
+\usepackage{tkz-tab}
+\usepackage{xpatch}
 
 
 
@@ -17,6 +19,9 @@
 
 \DefTblrTemplate{caption}{default}{}
 \DefTblrTemplate{capcont}{default}{}
+
+\xpatchcmd{\tkzTabLine}{$0$}{$\bullet$}{}{}
+\tikzset{t style/.style={style=solid}}
 
 
 
@@ -55,6 +60,7 @@
 \newcommand*{\cjcontinue}[1]{\(\Rightarrow\) #1 & \\}
 \newcommand*{\cjfa}[1]{\hline \(\Rightarrow\) #1 & Final answer. \\}
 \newcommand*{\cjfastep}[2]{\hline \(\Rightarrow\) #1 & Final answer. #2 \\}
+\newcommand{\cjsign}[1]{\hline & Create a table of signs. \\ \begin{tikzpicture}#1\end{tikzpicture} \\ \\}
 
 \newcommand*{\cjqed}{\(\blacksquare\)}
 
@@ -62,7 +68,7 @@
 {
 	\begin{longtblr}
 	[
-		expand = \cjwhy\cjsubwhy\cjcontinue\cjfa\cjfastep
+		expand = \cjwhy\cjsubwhy\cjcontinue\cjfa\cjfastep\cjsign
 	]
 	{
 		colspec = {|lX[r]|},

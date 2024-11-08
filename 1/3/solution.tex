@@ -25,9 +25,26 @@
 
 		\cjitem{\(-2 < 5 + 3x < 20\)}
 			\begin{cjsolution}
-				\cjwhy{\(-7 < 3x < 15\)}{Solve for x.}
+				\cjwhy{\(-7 < 3x < 15\)}{Solve for \(x\).}
 				\cjcontinue{\(-\frac{7}{3} < x < 5\)}
 				\cjfa{\(x \in (-\frac{7}{3}, 5)\)}
+			\end{cjsolution}
+
+		\cjitem{\(\frac{x}{x - 1} > -1\)}
+			\begin{cjsolution}
+				\cjwhy{\(\frac{x}{x - 1} + 1 > 0\)}{Solve for \(x\).}
+				\cjcontinue{\(\frac{x}{x - 1} + \frac{x - 1}{x - 1} > 0\)}
+				\cjcontinue{\(\frac{x + x - 1}{x - 1} > 0\)}
+				\cjsubwhy{\(\frac{2x - 1}{x - 1} > 0\)}{\(x = 1\) is an undefined point.}
+				\cjsign{
+					\tkzTabInit[lgt=2, espcl=2, deltacl=0]
+						{/.8, \(2x - 1\) /.8, \(x - 1\) /.8, \(\frac{2x - 1}{x - 1}\) /.8}
+						{,\(\frac{1}{2}\),\(1\),}
+					\tkzTabLine{,-,t,+,t,+,}
+					\tkzTabLine{,-,t,-,t,+,}
+					\tkzTabLine{,+,t,-,t,+,}
+				}
+				\cjfa{\(x \in (-\infty, \frac{1}{2}) \cup (1, +\infty)\)}
 			\end{cjsolution}
 	\end{cjsection}
 \end{document}
