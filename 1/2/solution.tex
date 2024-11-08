@@ -1,0 +1,42 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{Equations in Quadratic Form and with Radicals and Absolute Values}
+
+	\begin{cjsection}{Solve for \(x\)}
+		\cjitem{\(\sqrt{2x + 3} - \sqrt{x - 2} = \sqrt{x + 1}\)}
+			\begin{cjsolution}
+				\cjwhy{\({(\sqrt{2x + 3} - \sqrt{x - 2})}^2 = x + 1\)}{Square both sides.}
+				\cjcontinue{\(2x + 3 - 2\sqrt{2x + 3}\sqrt{x - 2} + x - 2 = x + 1\)}
+				\cjcontinue{\(2x + 3 + x - 2 - x - 1 = 2\sqrt{2x + 3}\sqrt{x - 2}\)}
+				\cjcontinue{\(2x = 2\sqrt{2x + 3}\sqrt{x - 2}\)}
+				\cjcontinue{\(x = \sqrt{2x + 3}\sqrt{x - 2}\)}
+				\cjsubwhy{\(x^2 = (2x + 3)(x - 2)\)}{Square both sides.}
+				\cjcontinue{\(x^2 = 2x^2 - 4x + 3x - 6\)}
+				\cjcontinue{\(x^2 = 2x^2 - x - 6\)}
+				\cjcontinue{\(2x^2 - x^2 - x - 6 = 0\)}
+				\cjcontinue{\(x^2 - x - 6 = 0\)}
+				\cjsubwhy{\((x - 3)(x + 2) = 0\)}{Factor by grouping.}
+				\cjcontinue{\(x \subseteq \{-2, 3\}\)}
+				\cjwhy{\(\sqrt{2(-2) + 3} - \sqrt{-2 - 2} = \sqrt{-2 + 1}\)}{Verify \(x = -2\)}
+				\cjcontinue{\(\sqrt{-4 + 3} - \sqrt{-2 - 2} = \sqrt{-2 + 1}\)}
+				\cjcontinue{\(\sqrt{-1} - \sqrt{-4} = \sqrt{-1}\)}
+				\cjcontinue{\(i - 2i = i\)}
+				\cjcontinue{\(-i = i\)}
+				\cjcontinue{\(x \neq -2\)}
+				\cjwhy{\(\sqrt{2(3) + 3} - \sqrt{3 - 2} = \sqrt{3 + 1}\)}{Verify \(x = 3\)}
+				\cjcontinue{\(\sqrt{6 + 3} - \sqrt{3 - 2} = \sqrt{3 + 1}\)}
+				\cjcontinue{\(\sqrt{9} - \sqrt{1} = \sqrt{4}\)}
+				\cjcontinue{\(3 - 1 = 2\)}
+				\cjcontinue{\(2 = 2\)}
+				\cjcontinue{\(x = 3\)}
+			\end{cjsolution}
+	\end{cjsection}
+\end{document}
