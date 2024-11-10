@@ -46,5 +46,43 @@
 					\cjcontinue{\({(y - \frac{3}{2})}^2 = 4(\frac{9}{8})(x + \frac{1}{2})\)}
 					\cjfa{Opening rightwards, \((h, k) = (-\frac{1}{2}, \frac{3}{2})\)}
 				\end{cjsolution}
+
+			\cjitem{Sketch the graph of the following parabolas.}
+				\cjsubitem{\(3y^2 = 8x\)}
+					\begin{cjsolution}
+						\cjwhy{\(y^2 = 4(\frac{2}{3})x\)}{Rewrite in standard form.}
+						\cjgraph{
+							\addplot+ [smooth] coordinates {
+								(8, -4.61880)
+								(4, -3.26598)
+								(2, -2.30940)
+								(1, -1.63299)
+								(0, 0)
+								(1, 1.63299)
+								(2, 2.30940)
+								(4, 3.26598)
+								(8, 4.61880)
+							};
+							\addlegendentry{\(y^2 = 4(\frac{2}{3})x\)}
+
+							\addplot+ [smooth] coordinates {
+								(-2/3, -6.53197)
+								(-2/3, 6.53197)
+							};
+							\addlegendentry{directrix}
+
+							\addplot+ [smooth] coordinates {
+								(2/3, 0)
+								(2/3, 0)
+							};
+							\addlegendentry{focus}
+
+							\addplot+ [smooth] coordinates {
+								(2/3, -4/3)
+								(2/3, 4/3)
+							};
+							\addlegendentry{latus rectum}
+						}
+					\end{cjsolution}
 	\end{cjsection}
 \end{document}
