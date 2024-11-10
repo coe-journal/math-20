@@ -1,0 +1,34 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{Lines and Circles}
+
+	\begin{cjsection}{}
+		\cjitem{Find the value of \(k\) such that the lines with equations \(3x + 2y - 4 = 0\) and
+		\(kx - 3y + 8\) are:}
+			\cjsubitem{Parallel.}
+				\begin{cjsolution}
+					\cjwhy{\(2y = -3x + 4\)}{Rewrite the first equation in slope-intercept form.}
+					\cjcontinue{\(y = -\frac{3}{2}x + 4\)}
+					\cjwhy{\(-3y = -kx - 8\)}{Rewrite the second equation in slope-intercept form.}
+					\cjcontinue{\(3y = kx + 8\)}
+					\cjcontinue{\(y = \frac{k}{3}x + \frac{8}{3}\)}
+					\cjwhy{\(\frac{k}{3} = -\frac{3}{2}\)}{Parallel slopes are equal.}
+					\cjfa{\(k = -\frac{9}{2}\)}
+				\end{cjsolution}
+
+			\cjsubitem{Perpendicular.}
+				\begin{cjsolution}
+					\cjwhy{\(\frac{k}{3} = -\frac{1}{-\frac{3}{2}}\)}{Perpendicular slopes are the negative reciprocal of each other.}
+					\cjcontinue{\(\frac{k}{3} = \frac{2}{3}\)}
+					\cjfa{\(k = 2\)}
+				\end{cjsolution}
+	\end{cjsection}
+\end{document}
