@@ -63,25 +63,49 @@
 								(4, 3.26598)
 								(8, 4.61880)
 							};
-							\addlegendentry{\(y^2 = 4(\frac{2}{3})x\)}
-
 							\addplot+ [smooth] coordinates {
 								(-2/3, -6.53197)
 								(-2/3, 6.53197)
 							};
-							\addlegendentry{directrix}
-
 							\addplot+ [smooth] coordinates {
 								(2/3, 0)
-								(2/3, 0)
 							};
-							\addlegendentry{focus}
-
 							\addplot+ [smooth] coordinates {
 								(2/3, -4/3)
 								(2/3, 4/3)
 							};
-							\addlegendentry{latus rectum}
+						}
+					\end{cjsolution}
+
+				\cjsubitem{\(x^2 - 8x + 4y = -10\)}
+					\begin{cjsolution}
+						\cjwhy{\(x^2 - 8x = -4y - 10\)}{Rewrite in standard form.}
+						\cjsubwhy{\(x^2 - 8x + 16 = -4y - 10 + 16\)}{Complete the square.}
+						\cjcontinue{\({(x - 4)}^2 = -4y + 6\)}
+						\cjcontinue{\({(x - 4)}^2 = 4(-1)(y - \frac{3}{2})\)}
+						\cjgraph{
+							\addplot+ [smooth] coordinates {
+								(-1.65685, 3/2-8)
+								(0, 3/2-4)
+								(1.17157, 3/2-2)
+								(2, 3/2-1)
+								(4, 3/2)
+								(6, 3/2-1)
+								(6.82842, 3/2-2)
+								(8, 3/2-4)
+								(9.65675, 3/2-8)
+							};
+							\addplot+ [smooth] coordinates {
+								(-1.65685, 3/2+1)
+								(9.65675, 3/2+1)
+							};
+							\addplot+ [smooth] coordinates {
+								(4, 3/2-1)
+							};
+							\addplot+ [smooth] coordinates {
+								(4 - 2, 3/2-1)
+								(4 + 2, 3/2-1)
+							};
 						}
 					\end{cjsolution}
 	\end{cjsection}
