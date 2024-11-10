@@ -1,0 +1,27 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{The 2-Dimensional Coordinate System}
+
+	\begin{cjsection}{}
+		\cjitem{Given \(A(4, 2)\), \(B(6, -4)\) and \(C(2, -7)\), find the distance between C and the midpoint \(M\) of \(\overline{AB}\).}
+			\begin{cjsolution}
+				\cjwhy{\(M = (\frac{4 + 6}{2}, \frac{2 - 4}{2})\)}{Use the midpoint formula.}
+				\cjcontinue{\(M = (\frac{10}{2}, \frac{-2}{2})\)}
+				\cjcontinue{\(M = (5, -1)\)}
+				\cjwhy{\(d_{CM} = \sqrt{{(5 - 2)}^2 + {(-7 + 1)}^2}\)}{Use the distance formula.}
+				\cjcontinue{\(d_{CM} = \sqrt{{(3)}^2 + {(-6)}^2}\)}
+				\cjcontinue{\(d_{CM} = \sqrt{9 + 36}\)}
+				\cjcontinue{\(d_{CM} = \sqrt{45}\)}
+				\cjcontinue{\(d_{CM} = \sqrt{9}\sqrt{5}\)}
+				\cjfa{\(d_{CM} = 3\sqrt{5}\)}
+			\end{cjsolution}
+	\end{cjsection}
+\end{document}
