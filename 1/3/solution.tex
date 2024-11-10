@@ -104,5 +104,64 @@
 				\cjcontinue{\(x \in [-\frac{9}{2}, 0)\)}
 				\cjfastep{\(x \in [-\frac{9}{2}, 0) \cup (0, \frac{3}{2}]\)}{Combine intervals.}
 			\end{cjsolution}
+
+		\cjitem{\(\abs{\frac{x}{2x - 3}} \le 1\)}
+			\begin{cjsolution}
+				\cjwhy{\(\frac{x}{2x - 3} \le 1\)}{\(\abs{a} \le b \Rightarrow a \le b\) and \(a \ge -b\). Solve for \(a \le b\).}
+				\cjcontinue{\(\frac{x}{2x - 3} - 1 \le 0\)}
+				\cjcontinue{\(\frac{x}{2x - 3} - \frac{2x - 3}{2x - 3} \le 0\)}
+				\cjcontinue{\(\frac{x - (2x - 3)}{2x - 3} \le 0\)}
+				\cjcontinue{\(\frac{x - 2x + 3}{2x - 3} \le 0\)}
+				\cjcontinue{\(\frac{-x + 3}{2x - 3} \le 0\)}
+				\cjcontinue{\(\frac{-(x - 3)}{2x - 3} \le 0\)}
+				\cjsubwhy{\(\frac{x - 3}{2x - 3} \ge 0\)}{\(x = \frac{3}{2}\) is an undefined point.}
+				\cjsign{
+					\tkzTabInit[lgt=2, espcl=2, deltacl=0]
+						{/.8, \(x - 3\) /.8, \(2x - 3\) /.8, \(\frac{x - 3}{2x - 3}\) /.8}
+						{,\(\frac{3}{2}\),\(3\),}
+					\tkzTabLine{,-,t,-,t,+,}
+					\tkzTabLine{,-,t,+,t,+,}
+					\tkzTabLine{,+,t,-,t,+,}
+				}
+				\cjcontinue{\(x \in (-\infty, \frac{3}{2}) \cup [3, +\infty)\)}
+				\cjwhy{\(\frac{x}{2x - 3} \ge -1\)}{\(\abs{a} \le b \Rightarrow a \le b\) and \(a \ge -b\). Solve for \(a \ge -b\).}
+				\cjcontinue{\(\frac{x}{2x - 3} + 1 \ge 0\)}
+				\cjcontinue{\(\frac{x}{2x - 3} + \frac{2x - 3}{2x - 3} \ge 0\)}
+				\cjcontinue{\(\frac{x + 2x - 3}{2x - 3} \ge 0\)}
+				\cjcontinue{\(\frac{3x - 3}{2x - 3} \ge 0\)}
+				\cjcontinue{\(\frac{3(x - 1)}{2x - 3} \ge 0\)}
+				\cjsubwhy{\(\frac{x - 1}{2x - 3} \ge 0\)}{\(x = \frac{3}{2}\) is an undefined point.}
+				\cjsign{
+					\tkzTabInit[lgt=2, espcl=2, deltacl=0]
+						{/.8, \(x - 1\) /.8, \(2x - 3\) /.8, \(\frac{x - 1}{2x - 3}\) /.8}
+						{,\(1\),\(\frac{3}{2}\),}
+					\tkzTabLine{,-,t,+,t,+,}
+					\tkzTabLine{,-,t,-,t,+,}
+					\tkzTabLine{,+,t,-,t,+,}
+				}
+				\cjcontinue{\(x \in (-\infty, 1] \cup (\frac{3}{2}, +\infty)\)}
+				\cjwhy{\(x \in ((-\infty, \frac{3}{2}) \cup [3, +\infty)) \cap ((-\infty, 1] \cup (\frac{3}{2}, +\infty))\)}{Combine intervals.}
+				\cjfa{\(x \in (-\infty, 1] \cup [3, +\infty)\)}
+			\end{cjsolution}
+
+		\cjitem{\(0 < \abs{x - 5} < 2\)}
+			\begin{cjsolution}
+				\cjwhy{\(\abs{x - 5} > 0, \abs{x - 5} < 2\)}{Split the inequality.}
+				\cjwhy{\(x - 5 > 0\)}{\(\abs{a} > b \Rightarrow a > b\) or \(a < -b\). Solve for \(a > b\).}
+				\cjcontinue{\(x > 5\)}
+				\cjcontinue{\(x \in (5, +\infty)\)}
+				\cjwhy{\(x - 5 < 0\)}{\(\abs{a} > b \Rightarrow a > b\) or \(a < -b\). Solve for \(a < -b\).}
+				\cjcontinue{\(x < 5\)}
+				\cjcontinue{\(x \in (-\infty, 5)\)}
+				\cjwhy{\(x - 5 < 2\)}{\(\abs{a} < b \Rightarrow a < b\) and \(a > -b\). Solve for \(a < b\).}
+				\cjcontinue{\(x < 7\)}
+				\cjcontinue{\(x \in (-\infty, 7)\)}
+				\cjwhy{\(x - 5 > -2\)}{\(\abs{a} < b \Rightarrow a < b\) and \(a > -b\). Solve for \(a > -b\).}
+				\cjcontinue{\(x > 3\)}
+				\cjcontinue{\(x \in (3, +\infty)\)}
+				\cjwhy{\(x \in ((-\infty, 5) \cup (5, +\infty)) \cap ((-\infty, 7) \cap (3, +\infty))\)}{Combine intervals.}
+				\cjcontinue{\(x \in ((-\infty, 5) \cup (5, +\infty)) \cap (3, 7)\)}
+				\cjfa{\(x \in (3, 5) \cup (5, 7)\)}
+			\end{cjsolution}
 	\end{cjsection}
 \end{document}
