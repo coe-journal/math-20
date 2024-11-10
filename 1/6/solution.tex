@@ -52,7 +52,7 @@
 					\begin{cjsolution}
 						\cjwhy{\(y^2 = 4(\frac{2}{3})x\)}{Rewrite in standard form.}
 						\cjgraph{
-							\addplot+ [smooth] coordinates {
+							\addplot [smooth] coordinates {
 								(8, -4.61880)
 								(4, -3.26598)
 								(2, -2.30940)
@@ -73,7 +73,7 @@
 						\cjcontinue{\({(x - 4)}^2 = -4y + 6\)}
 						\cjcontinue{\({(x - 4)}^2 = 4(-1)(y - \frac{3}{2})\)}
 						\cjgraph{
-							\addplot+ [smooth] coordinates {
+							\addplot [smooth] coordinates {
 								(-1.65685, 3/2-8)
 								(0, 3/2-4)
 								(1.17157, 3/2-2)
@@ -86,5 +86,45 @@
 							};
 						}
 					\end{cjsolution}
+
+			\cjitem{Sketch the graph of \(y = -x^2 + 6x - 8\). Label the vertex, x- and y-intercept(s).}
+				\begin{cjsolution}
+					\cjwhy{\(-x^2 + 6x = y + 8\)}{Rewrite in standard form.}
+					\cjcontinue{\(x^2 - 6x = -y - 8\)}
+					\cjsubwhy{\(x^2 - 6x + 9 = -y - 8 + 9\)}{Complete the square.}
+					\cjcontinue{\({(x - 3)}^2 = -y + 1\)}
+					\cjcontinue{\({(x - 3)}^2 = 4(-\frac{1}{4})(y - 1)\)}
+					\cjwhy{\({(x - 3)}^2 = 4(-\frac{1}{4})(-1)\)}{Find the x-intercepts.}
+					\cjcontinue{\({(x - 3)}^2 = 4(\frac{1}{4})\)}
+					\cjcontinue{\({(x - 3)}^2 = 1\)}
+					\cjcontinue{\(x = \pm 1 + 3\)}
+					\cjcontinue{\(x = 1 + 3, x = -1 + 3\)}
+					\cjcontinue{\(x_i \in \{2, 4\}\)}
+					\cjwhy{\({(0 - 3)}^2 = 4(-\frac{1}{4})(y - 1)\)}{Find the y-intercepts.}
+					\cjcontinue{\((-3)^2 = 4(-\frac{1}{4})(y - 1)\)}
+					\cjcontinue{\(9 = -(y - 1)\)}
+					\cjcontinue{\(9 = -y + 1\)}
+					\cjcontinue{\(y = 1 - 9\)}
+					\cjcontinue{\(y_i = -8\)}
+					\cjgraph{
+						\addplot [smooth] coordinates {
+							(-1, -15)
+							(0.17157, -7)
+							(1, -3)
+							(1.58578, -1)
+							(2, 0)
+							(3, 1)
+							(4, 0)
+							(4.41421, -1)
+							(5, -3)
+							(5.82842, -7)
+							(7, -15)
+						};
+						\addplot [mark=square*, nodes near coords = vertex] coordinates {(3, 1)};
+						\addplot [mark=square*, nodes near coords = \(y_i\)] coordinates {(0, -8)};
+						\addplot [mark=square*, nodes near coords = \(x_i\)] coordinates {(2, 0)};
+						\addplot [mark=square*, nodes near coords = \(x_i\)] coordinates {(4, 0)};
+					}
+				\end{cjsolution}
 	\end{cjsection}
 \end{document}
