@@ -109,5 +109,29 @@
 					\cjcontinue{\(y_i \in \emptyset\)}
 					\cjfa{\(x_i \in \emptyset, y_i \in \emptyset\)}
 				\end{cjsolution}
+
+		\cjitem{Determine the value(s) of \(k\) for which the graph of \(y = 2x^2 + kx + 8\) does
+		not intersect the x-axis. How about if the graph is to intersect the x-axis at exactly one point?}
+			\begin{cjsolution}
+				\cjwhy{\(2x^2 + kx + 8 = 0\)}{Set \(y = 0\), and rewrite in standard form.}
+				\cjwhy{\(k^2 - 4(2)(8) < 0\)}{If the discriminant is negative, the quadratic equation has no real solutions, and as such, no x-intercepts.}
+				\cjcontinue{\(k^2 - 16 < 0\)}
+				\cjsubwhy{\((k - 4)(k + 4) < 0\)}{Factor using difference of two squares.}
+				\cjsign{
+					\tkzTabInit[lgt=3, espcl=2, deltacl=0]
+						{/.8, \(k - 4\) /.8, \(k + 4\) /.8, \((k - 4)(k + 4)\) /.8}
+						{,\(-4\),\(4\),}
+					\tkzTabLine{,-,t,-,t,+,}
+					\tkzTabLine{,-,t,+,t,+,}
+					\tkzTabLine{,+,t,-,t,+,}
+				}
+				\cjcontinue{\(k \in (-4, 4)\)}
+				\cjwhy{\(k^2 - 4(2)(8) = 0\)}{If the disctiminant is zero, the quadratic equation has exactly one real solution, and as such, exactly one x-intercept.}
+				\cjcontinue{\(k^2 - 16 = 0\)}
+				\cjsubwhy{\((k - 4)(k + 4) = 0\)}{Factor using difference of two squares.}
+				\cjcontinue{\(k \in \{-4, 4\}\)}
+				\cjfastep{\(k \in (-4, 4)\)}{If the graph should have no x-intercept.}
+				\cjfastep{\(k \in \{-4, 4\}\)}{If the graph should have exactly one x-intercept.}
+			\end{cjsolution}
 	\end{cjsection}
 \end{document}
