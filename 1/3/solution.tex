@@ -67,5 +67,42 @@
 				}
 				\cjfastep{\((-\infty, -3) \cup [-2, -1) \cup [1, +\infty)\)}{Don't include undefined points.}
 			\end{cjsolution}
+
+		\cjitem{\(\abs{\frac{9 - 2x}{4x}} \ge 1\)}
+			\begin{cjsolution}
+				\cjwhy{\(\frac{9 - 2x}{4x} \ge 1\)}{\(\abs{a} \ge b \Rightarrow a \ge b\) or \(a \le -b\). Solve for \(a \ge b\).}
+				\cjcontinue{\(\frac{9 - 2x}{4x} - 1 \ge 0\)}
+				\cjcontinue{\(\frac{9 - 2x}{4x} - \frac{4x}{4x} \ge 0\)}
+				\cjcontinue{\(\frac{9 - 2x - 4x}{4x} \ge 0\)}
+				\cjcontinue{\(\frac{9 - 6x}{4x} \ge 0\)}
+				\cjcontinue{\(\frac{9 - 6x}{x} \ge 0\)}
+				\cjcontinue{\(\frac{-3(2x - 3)}{x} \ge 0\)}
+				\cjsubwhy{\(\frac{2x - 3}{x} \le 0\)}{\(x = 0\) is an undefined point.}
+				\cjsign{
+					\tkzTabInit[lgt=2, espcl=2, deltacl=0]
+						{/.8, \(2x - 3\) /.8, \(x\) /.8, \(\frac{2x - 3}{x}\) /.8}
+						{,\(0\),\(\frac{3}{2}\),}
+					\tkzTabLine{,-,t,-,t,+,}
+					\tkzTabLine{,-,t,+,t,+,}
+					\tkzTabLine{,+,t,-,t,+,}
+				}
+				\cjcontinue{\(x \in (0, \frac{3}{2}]\)}
+				\cjwhy{\(\frac{9 - 2x}{4x} \le -1\)}{\(\abs{a} \ge b \Rightarrow a \ge b\) or \(a \le -b\). Solve for \(a \le -b\).}
+				\cjcontinue{\(\frac{9 - 2x}{4x} + 1 \le 0\)}
+				\cjcontinue{\(\frac{9 - 2x}{4x} + \frac{4x}{4x} \le 0\)}
+				\cjcontinue{\(\frac{9 - 2x + 4x}{4x} \le 0\)}
+				\cjcontinue{\(\frac{2x + 9}{4x} \le 0\)}
+				\cjsubwhy{\(\frac{2x + 9}{x} \le 0\)}{\(x = 0\) is an undefined point.}
+				\cjsign{
+					\tkzTabInit[lgt=2, espcl=2, deltacl=0]
+						{/.8, \(2x + 9\) /.8, \(x\) /.8, \(\frac{2x + 9}{x}\) /.8}
+						{,\(-\frac{9}{2}\),\(0\),}
+					\tkzTabLine{,-,t,+,t,+,}
+					\tkzTabLine{,-,t,-,t,+,}
+					\tkzTabLine{,+,t,-,t,+,}
+				}
+				\cjcontinue{\(x \in [-\frac{9}{2}, 0)\)}
+				\cjfastep{\(x \in [-\frac{9}{2}, 0) \cup (0, \frac{3}{2}]\)}{Combine intervals.}
+			\end{cjsolution}
 	\end{cjsection}
 \end{document}
