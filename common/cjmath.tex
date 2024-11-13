@@ -5,7 +5,6 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[a4paper, margin=1in]{geometry}
-\usepackage[hidelinks]{hyperref}
 \usepackage{pgfplots}
 \usepackage{physics}
 \usepackage{tabularray}
@@ -37,9 +36,6 @@
 	Copyright \copyright{} Nile Jocson \textless{}novoseiversia@gmail.com\textgreater{} \\
 	Licensed under MPL-2.0. See LICENSE file.
 		\pagebreak
-
-	\tableofcontents{}
-		\pagebreak
 }
 
 
@@ -57,6 +53,10 @@
 
 
 
+\newcommand*{\cjsolsect}[1]{\hline --- #1: \\}
+\newcommand*{\cjneeded}[2]{\hline --- Needed: \\ \(\square\) #1 \(= \mathord{?}\) & #2 \\}
+\newcommand*{\cjgiven}[2]{\(\square\) #1 & #2 \\}
+
 \newcommand*{\cjwhy}[2]{\hline \(\Rightarrow\) #1 & #2 \\}
 \newcommand*{\cjsubwhy}[2]{\(\Rightarrow\) #1 & #2 \\}
 \newcommand*{\cjcontinue}[1]{\(\Rightarrow\) #1 & \\}
@@ -71,7 +71,7 @@
 {
 	\begin{longtblr}
 	[
-		expand = \cjwhy\cjsubwhy\cjcontinue\cjfa\cjfastep\cjsign\cjgraph
+		expand = \cjwhy\cjsubwhy\cjcontinue\cjfa\cjfastep\cjsign\cjgraph\cjgiven\cjsolsect\cjneeded
 	]
 	{
 		colspec = {|lX[r]|},
@@ -84,3 +84,7 @@
 }{}
 
 \newcommand*{\cjdiv}{\divisionsymbol{}}
+\newcommand*{\cjexp}[1]{\times 10^{#1}}
+\newcommand*{\cjunit}[1]{\text{ #1}}
+\newcommand*{\cjceil}[1]{\lceil#1\rceil}
+\newcommand*{\cjlog}[2]{\text{log}_{#1} #2}
