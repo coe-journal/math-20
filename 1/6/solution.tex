@@ -47,72 +47,79 @@
 					\cjfa{Opening rightward, \((h, k) = (-\frac{1}{2}, \frac{3}{2})\)}
 				\end{cjsolution}
 
-			\cjitem{Sketch the graph of the following parabolas.}
-				\cjsubitem{\(3y^2 = 8x\)}
-					\begin{cjsolution}
-						\cjwhy{\(y^2 = 4(\frac{2}{3})x\)}{Rewrite in standard form.}
-						\cjfastep{See Figure 1.}{Graph the parabola.}
-					\end{cjsolution}
-					\cjgraph{Figure 1. Graph of \(y^2 = 4(\frac{2}{3})x\).}{16}{
-						\pstGeonode[PosAngle=40](0,0){V}
-						\def\p{1.3333}
-						\pstIParabola(V){\p}{-16}{16}
-						\pstIParabolaFocusNode[linecolor=blue,PosAngle=-40](V){\p}{F}
-						\pstIParabolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_1,D_2},PosAngle={225,180}](V){\p}{D1}{D2}
-						\pstIParabolaAbsNode[linecolor=blue,PointName={L_1,L_2},PosAngle={-90, 90}](V){\p}{0.6667}{L1}{L2}
-						\pstLine[linecolor=blue]{L1}{L2}
-					}
-
-				\cjsubitem{\(x^2 - 8x + 4y = -10\)}
-					\begin{cjsolution}
-						\cjwhy{\(x^2 - 8x = -4y - 10\)}{Rewrite in standard form.}
-						\cjsubwhy{\(x^2 - 8x + 16 = -4y - 10 + 16\)}{Complete the square.}
-						\cjcontinue{\({(x - 4)}^2 = -4y + 6\)}
-						\cjcontinue{\({(x - 4)}^2 = 4(-1)(y - \frac{3}{2})\)}
-						\cjfastep{See Figure 2.}{Graph the parabola.}
-					\end{cjsolution}
-					\cjgraph{Figure 2. Graph of \({(x - 4)}^2 = 4(-1)(y - \frac{3}{2})\).}{16}{
-						\pstGeonode[PosAngle=140](4,1.5){V}
-						\def\p{-2}
-						\pstParabola(V){\p}{-16}{16}
-						\pstParabolaFocusNode[linecolor=blue,PosAngle=40](V){\p}{F}
-						\pstParabolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_1,D_2},PosAngle={90,90}](V){\p}{D1}{D2}
-						\pstParabolaOrdNode[linecolor=blue,PointName={L_1,L_2},PosAngle={180,0}](V){\p}{0.5}{L1}{L2}
-						\pstLine[linecolor=blue]{L1}{L2}
-					}
-
-			\cjitem{Sketch the graph of \(y = -x^2 + 6x - 8\). Label the vertex, x- and y-intercept(s).}
+		\cjitem{Sketch the graph of the following parabolas.}
+			\cjsubitem{\(3y^2 = 8x\)}
 				\begin{cjsolution}
-					\cjwhy{\(-x^2 + 6x = y + 8\)}{Rewrite in standard form.}
-					\cjcontinue{\(x^2 - 6x = -y - 8\)}
-					\cjsubwhy{\(x^2 - 6x + 9 = -y - 8 + 9\)}{Complete the square.}
-					\cjcontinue{\({(x - 3)}^2 = -y + 1\)}
-					\cjcontinue{\({(x - 3)}^2 = 4(-\frac{1}{4})(y - 1)\)}
-					\cjwhy{\({(x - 3)}^2 = 4(-\frac{1}{4})(-1)\)}{Find the x-intercepts.}
-					\cjcontinue{\({(x - 3)}^2 = 4(\frac{1}{4})\)}
-					\cjcontinue{\({(x - 3)}^2 = 1\)}
-					\cjcontinue{\(x = \pm 1 + 3\)}
-					\cjcontinue{\(x = 1 + 3, x = -1 + 3\)}
-					\cjcontinue{\(x_i \in \{2, 4\}\)}
-					\cjwhy{\({(0 - 3)}^2 = 4(-\frac{1}{4})(y - 1)\)}{Find the y-intercepts.}
-					\cjcontinue{\((-3)^2 = 4(-\frac{1}{4})(y - 1)\)}
-					\cjcontinue{\(9 = -(y - 1)\)}
-					\cjcontinue{\(9 = -y + 1\)}
-					\cjcontinue{\(y = 1 - 9\)}
-					\cjcontinue{\(y_i = -8\)}
-					\cjfastep{See Figure 3.}{Graph the parabola.}
+					\cjwhy{\(y^2 = 4(\frac{2}{3})x\)}{Rewrite in standard form.}
+					\cjwhy{\(V = (0, 0)\)}{Identify important objects; this is a parabola opening rightward. \(V = (h, k)\)}
+					\cjsubwhy{\(F = (\frac{2}{3}, 0)\)}{\(F = (h + p, k)\)}
+					\cjsubwhy{\(B_1 = (\frac{2}{3}, -\frac{4}{3})\)}{\(B_1 = (h + p, k - 2p)\)}
+					\cjsubwhy{\(B_2 = (\frac{2}{3}, \frac{4}{3})\)}{\(B_2 = (h + p, k + 2p)\)}
+					\cjsubwhy{\(D \Rightarrow x = -\frac{2}{3}\)}{\(D \Rightarrow x = h - p\)}
+					\cjfastep{See Figure 1.}{Graph the parabola.}
 				\end{cjsolution}
-				\cjgraph{Figure 3. Graph of \({(x - 3)}^2 = 4(-\frac{1}{4})(y - 1)\) with x- and y-intercepts.}{16}{
-					\pstGeonode[PosAngle=135](3,1){V}
-					\def\p{-0.5}
-					\pstParabola(V){\p}{-16}{16}
-					\pstParabolaFocusNode[linecolor=blue,PosAngle=-90](V){\p}{F}
-					\pstParabolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_1,D_2},PosAngle={90,90}](V){\p}{D1}{D2}
-					\pstParabolaOrdNode[linecolor=blue,PointName={L_1,L_2},PosAngle={200,-20}](V){\p}{0.75}{L1}{L2}
-					\pstLine[linecolor=blue]{L1}{L2}
-					\pstParabolaOrdNode[PointName={x_1,x_2},PosAngle={210,-30}](V){\p}{0}{x1}{x2}
-					\pstParabolaAbsNode[PointName=y_1](V){\p}{0}{y1}
+				\cjgraph{Figure 1. Graph of \(y^2 = 4(\frac{2}{3})x\).}{16}{
+					\pstGeonode[PosAngle=40](0,0){V}
+					\def\p{1.3333}
+					\pstIParabola(V){\p}{-16}{16}
+					\pstIParabolaFocusNode[linecolor=blue,PosAngle=-40](V){\p}{F}
+					\pstIParabolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_1,D_2},PosAngle={225,180}](V){\p}{D1}{D2}
+					\pstIParabolaAbsNode[linecolor=blue,PointName={B_1,B_2},PosAngle={-90, 90}](V){\p}{0.6667}{B1}{B2}
+					\pstLine[linecolor=blue]{B1}{B2}
 				}
+
+			\cjsubitem{\(x^2 - 8x + 4y = -10\)}
+				\begin{cjsolution}
+					\cjwhy{\(x^2 - 8x = -4y - 10\)}{Rewrite in standard form.}
+					\cjsubwhy{\(x^2 - 8x + 16 = -4y - 10 + 16\)}{Complete the square.}
+					\cjcontinue{\({(x - 4)}^2 = -4y + 6\)}
+					\cjcontinue{\({(x - 4)}^2 = 4(-1)(y - \frac{3}{2})\)}
+					\cjwhy{\(V = (4, \frac{3}{2})\)}{Identify important objects; this is a parabola opening downward. \(V = (h, k)\)}
+					\cjsubwhy{\(F = (4, \frac{1}{2})\)}{\(F = (h, k + p)\)}
+					\cjsubwhy{\(B_1 = (6, \frac{1}{2})\)}{\(B_1 = (h - 2p, k + p)\)}
+					\cjsubwhy{\(B_2 = (2, \frac{1}{2})\)}{\(B_2 = (h + 2p, k + p)\)}
+					\cjsubwhy{\(D \Rightarrow y = \frac{5}{2}\)}{\(D \Rightarrow y = k - p\)}
+					\cjfastep{See Figure 2.}{Graph the parabola.}
+				\end{cjsolution}
+				\cjgraph{Figure 2. Graph of \({(x - 4)}^2 = 4(-1)(y - \frac{3}{2})\).}{16}{
+					\pstGeonode[PosAngle=140](4,1.5){V}
+					\def\p{-2}
+					\pstParabola(V){\p}{-16}{16}
+					\pstParabolaFocusNode[linecolor=blue,PosAngle=40](V){\p}{F}
+					\pstParabolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_1,D_2},PosAngle={90,90}](V){\p}{D1}{D2}
+					\pstParabolaOrdNode[linecolor=blue,PointName={B_1,B_2},PosAngle={180,0}](V){\p}{0.5}{B1}{B2}
+					\pstLine[linecolor=blue]{B1}{B2}
+				}
+
+		\cjitem{Sketch the graph of \(y = -x^2 + 6x - 8\). Label the vertex, x- and y-intercept(s).}
+			\begin{cjsolution}
+				\cjwhy{\(-x^2 + 6x = y + 8\)}{Rewrite in standard form.}
+				\cjcontinue{\(x^2 - 6x = -y - 8\)}
+				\cjsubwhy{\(x^2 - 6x + 9 = -y - 8 + 9\)}{Complete the square.}
+				\cjcontinue{\({(x - 3)}^2 = -y + 1\)}
+				\cjcontinue{\({(x - 3)}^2 = 4(-\frac{1}{4})(y - 1)\)}
+				\cjwhy{\({(x - 3)}^2 = 4(-\frac{1}{4})(-1)\)}{Find the x-intercepts.}
+				\cjcontinue{\({(x - 3)}^2 = 4(\frac{1}{4})\)}
+				\cjcontinue{\({(x - 3)}^2 = 1\)}
+				\cjcontinue{\(x - 3 = \pm 1\)}
+				\cjcontinue{\(x = \pm 1 + 3\)}
+				\cjcontinue{\(x = 1 + 3, x = -1 + 3\)}
+				\cjcontinue{\(x_i \in \{2, 4\}\)}
+				\cjwhy{\({(0 - 3)}^2 = 4(-\frac{1}{4})(y - 1)\)}{Find the y-intercepts.}
+				\cjcontinue{\((-3)^2 = 4(-\frac{1}{4})(y - 1)\)}
+				\cjcontinue{\(9 = -(y - 1)\)}
+				\cjcontinue{\(9 = -y + 1\)}
+				\cjcontinue{\(y = 1 - 9\)}
+				\cjcontinue{\(y_i = -8\)}
+				\cjfastep{See Figure 3.}{Graph the parabola.}
+			\end{cjsolution}
+			\cjgraph{Figure 3. Graph of \({(x - 3)}^2 = 4(-\frac{1}{4})(y - 1)\) with x- and y-intercepts.}{16}{
+				\pstGeonode[PosAngle=135](3,1){V}
+				\def\p{-0.5}
+				\pstParabola(V){\p}{-16}{16}
+				\pstParabolaOrdNode[PointName={x_1,x_2},PosAngle={210,-30}](V){\p}{0}{x1}{x2}
+				\pstParabolaAbsNode[PointName=y_1](V){\p}{0}{y1}
+			}
 	\end{cjsection}
 
 
@@ -122,6 +129,14 @@
 			\cjsubitem{\(\frac{x^2}{4} + \frac{{(y - 1)}^2}{9} = 1\)}
 				\begin{cjsolution}
 					\cjwhy{\(\frac{x^2}{2^2} + \frac{{(y - 1)}^2}{3^2} = 1\)}{Rewrite in standard form.}
+					\cjwhy{\(C = (0, 1)\)}{Identify important objects; this is an ellipse with a vertical major axis. \(C = (h, k)\)}
+					\cjsubwhy{\(c = \sqrt{5}\)}{\(c = \sqrt{b^2 - a^2}\)}
+					\cjsubwhy{\(V_1 = (0, -2)\)}{\(V_1 = (h, k - b)\)}
+					\cjsubwhy{\(V_2 = (0, 4)\)}{\(V_2 = (h, k + b)\)}
+					\cjsubwhy{\(B_1 = (-2, 1)\)}{\(B_1 = (h - a, k)\)}
+					\cjsubwhy{\(B_2 = (2, 1)\)}{\(B_2 = (h + a, k)\)}
+					\cjsubwhy{\(F_1 = (0, 1 - \sqrt{5})\)}{\(F_1 = (h, k - c)\)}
+					\cjsubwhy{\(F_2 = (0, 1 + \sqrt{5})\)}{\(F_2 = (h, k + c)\)}
 					\cjfastep{See Figure 4.}{Graph the ellipse.}
 				\end{cjsolution}
 				\cjgraph{Figure 4. Graph of \(\frac{x^2}{2^2} + \frac{{(y - 1)}^2}{3^2} = 1\).}{16}{
@@ -140,6 +155,14 @@
 				\begin{cjsolution}
 					\cjwhy{\(\frac{{(x - 3)}^2}{25} + \frac{{(y + 2)}^2}{9} = 1\)}{Factor by grouping.}
 					\cjsubwhy{\(\frac{{(x - 3)}^2}{5^2} + \frac{{(y + 2)}^2}{3^2} = 1\)}{Rewrite in standard form.}
+					\cjwhy{\(C = (3, -2)\)}{Identify important objects; this is an ellipse with a horizontal major axis. \(C = (h, k)\)}
+					\cjsubwhy{\(c = 4\)}{\(c = \sqrt{a^2 - b^2}\)}
+					\cjsubwhy{\(V_1 = (-2, -2)\)}{\(V_1 = (h - a, k)\)}
+					\cjsubwhy{\(V_2 = (8, -2)\)}{\(V_2 = (h + a, k)\)}
+					\cjsubwhy{\(B_1 = (3, -5)\)}{\(B_1 = (h, k - b)\)}
+					\cjsubwhy{\(B_2 = (3, 1)\)}{\(B_2 = (h, k + b)\)}
+					\cjsubwhy{\(F_1 = (-1, -2)\)}{\(F_1 = (h - c, k)\)}
+					\cjsubwhy{\(F_2 = (7, -2)\)}{\(F_2 = (h + c, k)\)}
 					\cjfastep{See Figure 5.}{Graph the ellipse.}
 				\end{cjsolution}
 				\cjgraph{Figure 5. Graph of \(\frac{{(x - 3)}^2}{5^2} + \frac{{(y + 2)}^2}{3^2} = 1\).}{16}{
@@ -171,6 +194,14 @@
 					\cjsubwhy{\(\frac{{(x + 4)}^2}{6^2} + \frac{{(y - 3)}^2}{{(\sqrt{24})}^2} = 1\)}{Rewrite in standard form.}
 					\cjcontinue{\(\frac{{(x + 4)}^2}{6^2} + \frac{{(y - 3)}^2}{{(\sqrt{4}\sqrt{6})}^2} = 1\)}
 					\cjcontinue{\(\frac{{(x + 4)}^2}{6^2} + \frac{{(y - 3)}^2}{{(2\sqrt{6})}^2} = 1\)}
+					\cjwhy{\(C = (-4, 3)\)}{Identify important objects; this is an ellipse with a horizontal major axis. \(C = (h, k)\)}
+					\cjsubwhy{\(c = 2\sqrt{3}\)}{\(c = \sqrt{a^2 - b^2}\)}
+					\cjsubwhy{\(V_1 = (-10, 3)\)}{\(V_1 = (h - a, k)\)}
+					\cjsubwhy{\(V_2 = (2, 3)\)}{\(V_2 = (h + a, k)\)}
+					\cjsubwhy{\(B_1 = (-4, 3 - 2\sqrt{6})\)}{\(B_1 = (h, k - b)\)}
+					\cjsubwhy{\(B_2 = (-4, 3 + 2\sqrt{6})\)}{\(B_2 = (h, k + b)\)}
+					\cjsubwhy{\(F_1 = (-4 - 2\sqrt{3}, 3)\)}{\(F_1 = (h - c, k)\)}
+					\cjsubwhy{\(F_2 = (-4 + 2\sqrt{3}, 3)\)}{\(F_2 = (h + c, k)\)}
 					\cjfastep{See Figure 6.}{Graph the ellipse.}
 				\end{cjsolution}
 				\cjgraph{Figure 6. Graph of \(\frac{{(x + 4)}^2}{6^2} + \frac{{(y - 3)}^2}{{(2\sqrt{6})}^2} = 1\)}{16}{
@@ -190,10 +221,10 @@
 			\begin{cjsolution}
 				\cjwhy{\(\frac{{(x - 2)}^2}{\frac{1}{4}} + \frac{{(y + 1)}^2}{1} = 1\)}{Rewrite in standard form.}
 				\cjsubwhy{\(\frac{{(x - 2)}^2}{{\frac{1}{2}}^2} + \frac{{(y + 1)}^2}{1^2} = 1\)}{Since \(a < b\), this is an ellipse with a vertical major axis.}
-				\cjsubwhy{\(V_1 = (2, -2)\)}{\(V_1 = (h, k - b)\) for ellipses with a vertical major axis.}
-				\cjsubwhy{\(V_2 = (2, 0)\)}{\(V_2 = (h, k + b)\) for ellipses with a vertical major axis.}
+				\cjsubwhy{\(V_1 = (2, -2)\)}{\(V_1 = (h, k - b)\)}
+				\cjsubwhy{\(V_2 = (2, 0)\)}{\(V_2 = (h, k + b)\)}
 				\cjwhy{\(V = (2, 0), F = (2, -2)\)}{Derive the vertex and focus. Since this is a parabola opening downward, the lower point is the focus.}
-				\cjsubwhy{\(0 + p = -2\)}{Derive \(p\); \(F = (h, k + p)\) for parabolas opening downward.}
+				\cjsubwhy{\(0 + p = -2\)}{Derive \(p\); \(F = (h, k + p)\)}
 				\cjcontinue{\(p = -2\)}
 				\cjfastep{\({(x - 2)}^2 = 4(-2)y\)}{Write the parabola equation using \((h, k)\) and \(p\).}
 			\end{cjsolution}
