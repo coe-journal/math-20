@@ -1,15 +1,21 @@
 % SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
 % SPDX-License-Identifier: MPL-2.0
 
+\usepackage[a4paper, margin=1in]{geometry}
+
 \usepackage{adjustbox}
+
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{pgfplots}
 \usepackage{physics}
+
 \usepackage{tabularray}
 \usepackage{tkz-tab}
 \usepackage{xpatch}
+
+\usepackage{pstricks-add}
+\usepackage{pst-eucl}
+\usepackage[crop=off]{auto-pst-pdf}
 
 
 
@@ -27,6 +33,8 @@
 
 
 \newcommand*{\cjboilerplate}[2]{
+	\psset{unit=5.5mm, ticks=none, xlabelsep=1pt, ylabelsep=1pt}
+
 	\author{Nile Jocson \textless{}novoseiversia@gmail.com\textgreater{}}
 	\title{Exercise Solutions for #1\\{\large #2}}
 	\date{\today}
@@ -62,8 +70,15 @@
 \newcommand*{\cjcontinue}[1]{\(\Rightarrow\) #1 & \\}
 \newcommand*{\cjfa}[1]{\hline \(\Rightarrow\) #1 & Final answer. \\}
 \newcommand*{\cjfastep}[2]{\hline \(\Rightarrow\) #1 & Final answer. #2 \\}
-\newcommand{\cjsign}[1]{\hline & Create a table of signs. \\ \begin{adjustbox}{width=0.49\textwidth}\begin{tikzpicture}#1\end{tikzpicture}\end{adjustbox} \\ \\}
-\newcommand{\cjgraph}[1]{\hline & Graph the equation. \\ \begin{adjustbox}{width=0.49\textwidth}\begin{tikzpicture}\begin{axis}[axis lines=middle, axis equal, grid=both]#1\end{axis}\end{tikzpicture}\end{adjustbox} \\ \\}
+
+\newcommand{\cjsign}[1]{
+	\hline & Create a table of signs. \\
+	\begin{adjustbox}{width=0.49\textwidth}
+		\begin{tikzpicture}
+			#1
+		\end{tikzpicture}
+	\end{adjustbox} \\ \\
+}
 
 \newcommand*{\cjqed}{\(\blacksquare\)}
 
@@ -71,7 +86,7 @@
 {
 	\begin{longtblr}
 	[
-		expand = \cjwhy\cjsubwhy\cjcontinue\cjfa\cjfastep\cjsign\cjgraph\cjgiven\cjsolsect\cjneeded
+		expand = \cjwhy\cjsubwhy\cjcontinue\cjfa\cjfastep\cjsign\cjgiven\cjsolsect\cjneeded
 	]
 	{
 		colspec = {|lX[r]|},
@@ -88,3 +103,17 @@
 \newcommand*{\cjunit}[1]{\text{ #1}}
 \newcommand*{\cjceil}[1]{\lceil#1\rceil}
 \newcommand*{\cjlog}[2]{\text{log}_{#1} #2}
+
+
+
+\newcommand*{\cjgraph}[3]{
+	\begin{center}
+		\begin{adjustbox}{width=\textwidth}
+			\begin{pspicture*}(-#2,-#2)(#2,#2)
+				\psaxes[labels=none]{<->}(0,0)(-16,-16)(16,16)[\(x\),0][\(y\),90]
+				#3
+			\end{pspicture*}
+		\end{adjustbox}
+		#1
+	\end{center}
+}

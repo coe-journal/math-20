@@ -51,20 +51,17 @@
 				\cjsubitem{\(3y^2 = 8x\)}
 					\begin{cjsolution}
 						\cjwhy{\(y^2 = 4(\frac{2}{3})x\)}{Rewrite in standard form.}
-						\cjgraph{
-							\addplot [smooth] coordinates {
-								(8, -4.61880)
-								(4, -3.26598)
-								(2, -2.30940)
-								(1, -1.63299)
-								(0, 0)
-								(1, 1.63299)
-								(2, 2.30940)
-								(4, 3.26598)
-								(8, 4.61880)
-							};
-						}
+						\cjfastep{See Figure 1.}{Graph the parabola.}
 					\end{cjsolution}
+					\cjgraph{Figure 1. Graph of \(y^2 = 4(\frac{2}{3})x\).}{16}{
+						\pstGeonode[PosAngle=40](0,0){V}
+						\def\p{1.3333}
+						\pstIParabola(V){\p}{-16}{16}
+						\pstIParabolaFocusNode[linecolor=blue,PosAngle=-40](V){\p}{F}
+						\pstIParabolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_1,D_2},PosAngle={225,180}](V){\p}{D1}{D2}
+						\pstIParabolaAbsNode[linecolor=blue,PointName={L_1,L_2},PosAngle={-90, 90}](V){\p}{0.6667}{L1}{L2}
+						\pstLine[linecolor=blue]{L1}{L2}
+					}
 
 				\cjsubitem{\(x^2 - 8x + 4y = -10\)}
 					\begin{cjsolution}
@@ -72,20 +69,17 @@
 						\cjsubwhy{\(x^2 - 8x + 16 = -4y - 10 + 16\)}{Complete the square.}
 						\cjcontinue{\({(x - 4)}^2 = -4y + 6\)}
 						\cjcontinue{\({(x - 4)}^2 = 4(-1)(y - \frac{3}{2})\)}
-						\cjgraph{
-							\addplot [smooth] coordinates {
-								(-1.65685, 3/2-8)
-								(0, 3/2-4)
-								(1.17157, 3/2-2)
-								(2, 3/2-1)
-								(4, 3/2)
-								(6, 3/2-1)
-								(6.82842, 3/2-2)
-								(8, 3/2-4)
-								(9.65675, 3/2-8)
-							};
-						}
+						\cjfastep{See Figure 2.}{Graph the parabola.}
 					\end{cjsolution}
+					\cjgraph{Figure 2. Graph of \({(x - 4)}^2 = 4(-1)(y - \frac{3}{2})\).}{16}{
+						\pstGeonode[PosAngle=140](4,1.5){V}
+						\def\p{-2}
+						\pstParabola(V){\p}{-16}{16}
+						\pstParabolaFocusNode[linecolor=blue,PosAngle=40](V){\p}{F}
+						\pstParabolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_1,D_2},PosAngle={90,90}](V){\p}{D1}{D2}
+						\pstParabolaOrdNode[linecolor=blue,PointName={L_1,L_2},PosAngle={180,0}](V){\p}{0.5}{L1}{L2}
+						\pstLine[linecolor=blue]{L1}{L2}
+					}
 
 			\cjitem{Sketch the graph of \(y = -x^2 + 6x - 8\). Label the vertex, x- and y-intercept(s).}
 				\begin{cjsolution}
@@ -106,25 +100,18 @@
 					\cjcontinue{\(9 = -y + 1\)}
 					\cjcontinue{\(y = 1 - 9\)}
 					\cjcontinue{\(y_i = -8\)}
-					\cjgraph{
-						\addplot [smooth] coordinates {
-							(-1, -15)
-							(0.17157, -7)
-							(1, -3)
-							(1.58578, -1)
-							(2, 0)
-							(3, 1)
-							(4, 0)
-							(4.41421, -1)
-							(5, -3)
-							(5.82842, -7)
-							(7, -15)
-						};
-						\addplot [mark=square*, nodes near coords = vertex] coordinates {(3, 1)};
-						\addplot [mark=square*, nodes near coords = \(y_i\)] coordinates {(0, -8)};
-						\addplot [mark=square*, nodes near coords = \(x_i\)] coordinates {(2, 0)};
-						\addplot [mark=square*, nodes near coords = \(x_i\)] coordinates {(4, 0)};
-					}
+					\cjfastep{See Figure 3.}{Graph the parabola.}
 				\end{cjsolution}
+				\cjgraph{Figure 3. Graph of \({(x - 3)}^2 = 4(-\frac{1}{4})(y - 1)\) with x- and y-intercepts.}{16}{
+					\pstGeonode[PosAngle=135](3,1){V}
+					\def\p{-0.5}
+					\pstParabola(V){\p}{-16}{16}
+					\pstParabolaFocusNode[linecolor=blue,PosAngle=-90](V){\p}{F}
+					\pstParabolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_1,D_2},PosAngle={90,90}](V){\p}{D1}{D2}
+					\pstParabolaOrdNode[linecolor=blue,PointName={L_1,L_2},PosAngle={200,-20}](V){\p}{0.75}{L1}{L2}
+					\pstLine[linecolor=blue]{L1}{L2}
+					\pstParabolaOrdNode[PointName={x_1,x_2},PosAngle={210,-30}](V){\p}{0}{x1}{x2}
+					\pstParabolaAbsNode[PointName=y_1](V){\p}{0}{y1}
+				}
 	\end{cjsection}
 \end{document}
