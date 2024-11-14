@@ -114,4 +114,75 @@
 					\pstParabolaAbsNode[PointName=y_1](V){\p}{0}{y1}
 				}
 	\end{cjsection}
+
+
+
+	\begin{cjsection}{}
+		\cjitem{Sketch the graph of the following ellipses.}
+			\cjsubitem{\(\frac{x^2}{4} + \frac{{(y - 1)}^2}{9} = 1\)}
+				\begin{cjsolution}
+					\cjwhy{\(\frac{x^2}{2^2} + \frac{{(y - 1)}^2}{3^2} = 1\)}{Rewrite in standard form.}
+					\cjfastep{See Figure 4.}{Graph the ellipse.}
+				\end{cjsolution}
+				\cjgraph{Figure 4. Graph of \(\frac{x^2}{2^2} + \frac{{(y - 1)}^2}{3^2} = 1\).}{16}{
+					\pstGeonode[linecolor=red](0, 1){C}
+					\def\a{2}
+					\def\b{3}
+					\pstEllipse(C)(\a,\b)
+					\pstEllipseFocusNode[linecolor=red,PointName={F_1,F_2}](C)(\a,\b){F1}{F2}
+					\pstEllipseNode[linecolor=blue,PointName=V_1,PosAngle=45](C)(\a,\b){90}{V1}
+					\pstEllipseNode[linecolor=blue,PointName=V_2,PosAngle=-45](C)(\a,\b){-90}{V2}
+					\pstEllipseNode[linecolor=blue,PointName=B_1](C)(\a,\b){180}{B1}
+					\pstEllipseNode[linecolor=blue,PointName=B_2](C)(\a,\b){0}{B2}
+				}
+
+			\cjsubitem{\(\frac{{(x - 3)}^2}{25} + \frac{y^2 + 4y + 4}{9} = 1\)}
+				\begin{cjsolution}
+					\cjwhy{\(\frac{{(x - 3)}^2}{25} + \frac{{(y + 2)}^2}{9} = 1\)}{Factor by grouping.}
+					\cjsubwhy{\(\frac{{(x - 3)}^2}{5^2} + \frac{{(y + 2)}^2}{3^2} = 1\)}{Rewrite in standard form.}
+					\cjfastep{See Figure 5.}{Graph the ellipse.}
+				\end{cjsolution}
+				\cjgraph{Figure 5. Graph of \(\frac{{(x - 3)}^2}{5^2} + \frac{{(y + 2)}^2}{3^2} = 1\).}{16}{
+					\pstGeonode[linecolor=red](3, -2){C}
+					\def\a{5}
+					\def\b{3}
+					\pstEllipse(C)(\a,\b)
+					\pstEllipseFocusNode[linecolor=red,PointName={F_1,F_2},PosAngle={0,180}](C)(\a,\b){F1}{F2}
+					\pstEllipseNode[linecolor=blue,PointName=V_1,PosAngle=180](C)(\a,\b){180}{V1}
+					\pstEllipseNode[linecolor=blue,PointName=V_2,PosAngle=0](C)(\a,\b){0}{V2}
+					\pstEllipseNode[linecolor=blue,PointName=B_1,PosAngle=90](C)(\a,\b){90}{B1}
+					\pstEllipseNode[linecolor=blue,PointName=B_2,PosAngle=-90](C)(\a,\b){-90}{B2}
+				}
+
+			\cjsubitem{\(2x^2 + 3y^2 + 16x - 18y = 13\)}
+				\begin{cjsolution}
+					\cjwhy{\(2x^2 + 16x + 3y^2 - 18y = 13\)}{Group terms.}
+					\cjcontinue{\(2(x^2 + 8x) + 3(y^2 - 6y) = 13\)}
+					\cjsubwhy{\(2(x^2 + 8x + 16) + 3(y^2 - 6y) = 13 + 2(16)\)}{Complete the square.}
+					\cjcontinue{\(2(x^2 + 8x + 16) + 3(y^2 - 6y) = 13 + 32\)}
+					\cjcontinue{\(2(x^2 + 8x + 16) + 3(y^2 - 6y) = 45\)}
+					\cjcontinue{\(2{(x + 4)}^2 + 3(y^2 - 6y) = 45\)}
+					\cjsubwhy{\(2{(x + 4)}^2 + 3(y^2 - 6y + 9) = 45 + 3(9)\)}{Complete the square.}
+					\cjcontinue{\(2{(x + 4)}^2 + 3(y^2 - 6y + 9) = 45 + 27\)}
+					\cjcontinue{\(2{(x + 4)}^2 + 3(y^2 - 6y + 9) = 72\)}
+					\cjcontinue{\(2{(x + 4)}^2 + 3{(y - 3)}^2 = 72\)}
+					\cjcontinue{\(\frac{2{(x + 4)}^2}{72} + \frac{3{(y - 3)}^2}{72} = 1\)}
+					\cjcontinue{\(\frac{{(x + 4)}^2}{36} + \frac{{(y - 3)}^2}{24} = 1\)}
+					\cjsubwhy{\(\frac{{(x + 4)}^2}{6^2} + \frac{{(y - 3)}^2}{{(\sqrt{24})}^2} = 1\)}{Rewrite in standard form.}
+					\cjcontinue{\(\frac{{(x + 4)}^2}{6^2} + \frac{{(y - 3)}^2}{{(\sqrt{4}\sqrt{6})}^2} = 1\)}
+					\cjcontinue{\(\frac{{(x + 4)}^2}{6^2} + \frac{{(y - 3)}^2}{{(2\sqrt{6})}^2} = 1\)}
+					\cjfastep{See Figure 6.}{Graph the ellipse.}
+				\end{cjsolution}
+				\cjgraph{Figure 6. Graph of \(\frac{{(x + 4)}^2}{6^2} + \frac{{(y - 3)}^2}{{(2\sqrt{6})}^2} = 1\)}{16}{
+					\pstGeonode[linecolor=red](-4, 3){C}
+					\def\a{6}
+					\def\b{4.8990}
+					\pstEllipse(C)(\a,\b)
+					\pstEllipseFocusNode[linecolor=red,PointName={F_1,F_2},PosAngle={0,180}](C)(\a,\b){F1}{F2}
+					\pstEllipseNode[linecolor=blue,PointName=V_1,PosAngle=180](C)(\a,\b){180}{V1}
+					\pstEllipseNode[linecolor=blue,PointName=V_2,PosAngle=0](C)(\a,\b){0}{V2}
+					\pstEllipseNode[linecolor=blue,PointName=B_1,PosAngle=90](C)(\a,\b){90}{B1}
+					\pstEllipseNode[linecolor=blue,PointName=B_2,PosAngle=-90](C)(\a,\b){-90}{B2}
+				}
+	\end{cjsection}
 \end{document}
