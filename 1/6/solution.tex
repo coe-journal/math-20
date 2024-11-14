@@ -21,7 +21,7 @@
 					\cjcontinue{\({(y + \frac{1}{2})}^2 = -\frac{x}{4} + \frac{3}{4}\)}
 					\cjcontinue{\({(y + \frac{1}{2})}^2 = -\frac{1}{4}(x - 3)\)}
 					\cjcontinue{\({(y + \frac{1}{2})}^2 = 4(-\frac{1}{16})(x - 3)\)}
-					\cjfa{Opening leftwards, \((h, k) = (3, -\frac{1}{2})\)}
+					\cjfa{Opening leftward, \((h, k) = (3, -\frac{1}{2})\)}
 				\end{cjsolution}
 
 			\cjsubitem{\(x^2 - 6x - 2y = 7\)}
@@ -31,7 +31,7 @@
 					\cjcontinue{\({(x - 3)}^2 = 2y + 16\)}
 					\cjcontinue{\({(x - 3)}^2 = 2(y + 8)\)}
 					\cjcontinue{\({(x - 3)}^2 = 4(\frac{1}{2})(y + 8)\)}
-					\cjfa{Opening upwards, \((h, k) = (3, -8)\)}
+					\cjfa{Opening upward, \((h, k) = (3, -8)\)}
 				\end{cjsolution}
 
 			\cjsubitem{\(2y^2 - 6y - 9x = 0\)}
@@ -44,7 +44,7 @@
 					\cjcontinue{\({(y - \frac{3}{2})}^2 = \frac{9}{2}(x + \frac{18}{36})\)}
 					\cjcontinue{\({(y - \frac{3}{2})}^2 = \frac{9}{2}(x + \frac{1}{2})\)}
 					\cjcontinue{\({(y - \frac{3}{2})}^2 = 4(\frac{9}{8})(x + \frac{1}{2})\)}
-					\cjfa{Opening rightwards, \((h, k) = (-\frac{1}{2}, \frac{3}{2})\)}
+					\cjfa{Opening rightward, \((h, k) = (-\frac{1}{2}, \frac{3}{2})\)}
 				\end{cjsolution}
 
 			\cjitem{Sketch the graph of the following parabolas.}
@@ -184,5 +184,18 @@
 					\pstEllipseNode[linecolor=blue,PointName=B_1,PosAngle=90](C)(\a,\b){90}{B1}
 					\pstEllipseNode[linecolor=blue,PointName=B_2,PosAngle=-90](C)(\a,\b){-90}{B2}
 				}
+
+		\cjitem{Find an equation of the parabola that opens downward and whose vertex and focus are
+		the vertices of the ellipse \(4{(x - 2)}^2 + {(y + 1)}^2 = 1\)}.
+			\begin{cjsolution}
+				\cjwhy{\(\frac{{(x - 2)}^2}{\frac{1}{4}} + \frac{{(y + 1)}^2}{1} = 1\)}{Rewrite in standard form.}
+				\cjsubwhy{\(\frac{{(x - 2)}^2}{{\frac{1}{2}}^2} + \frac{{(y + 1)}^2}{1^2} = 1\)}{Since \(a < b\), this is an ellipse with a vertical major axis.}
+				\cjsubwhy{\(V_1 = (2, -2)\)}{\(V_1 = (h, k - b)\) for ellipses with a vertical major axis.}
+				\cjsubwhy{\(V_2 = (2, 0)\)}{\(V_2 = (h, k + b)\) for ellipses with a vertical major axis.}
+				\cjwhy{\(V = (2, 0), F = (2, -2)\)}{Derive the vertex and focus. Since this is a parabola opening downward, the lower point is the focus.}
+				\cjsubwhy{\(0 + p = -2\)}{Derive \(p\); \(F = (h, k + p)\) for parabolas opening downward.}
+				\cjcontinue{\(p = -2\)}
+				\cjfastep{\({(x - 2)}^2 = 4(-2)y\)}{Write the parabola equation using \((h, k)\) and \(p\).}
+			\end{cjsolution}
 	\end{cjsection}
 \end{document}
