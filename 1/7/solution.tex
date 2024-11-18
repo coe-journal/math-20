@@ -122,7 +122,7 @@
 					\pstHyperbola(C)(\a,\b)
 					\pstHyperbolaOrdNode[linecolor=blue,PointName={V_1,V_2},PosAngle={180,0}](C)(\a,\b){-2}{V1}{V2}
 					\pstHyperbolaFocusNode[linecolor=red,PointName={F_1,F_2},PosAngle={180,0}](C)(\a,\b){F1}{F2}
-					\ps2HyperbolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_{A_1},D_{A_2},D_{B_1},D_{B_2}},PosAngle={0,0,180,180}](C)(\a,\b){DA1}{DA2}{DB1}{DB2}
+					\pstHyperbolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_{A_1},D_{A_2},D_{B_1},D_{B_2}},PosAngle={0,0,180,180}](C)(\a,\b){DA1}{DA2}{DB1}{DB2}
 				}
 
 		\cjitem{Find an equation of the hyperbola having \((2, 1)\) and \((-2, 1)\) as its foci and
@@ -141,6 +141,110 @@
 				\cjcontinue{\(a^2 = \frac{7}{4}\)}
 				\cjcontinue{\(a = \sqrt{\frac{7}{4}}\)}
 				\cjfastep{\(\frac{x^2}{{(\sqrt{\frac{7}{4}})}^2} - \frac{{(y - 1)}^2}{{(\frac{3}{2})}^2} = 1\)}{Write the hyperbola equation using \((h, k)\), \(a\), and \(b\).}
+			\end{cjsolution}
+	\end{cjsection}
+
+
+
+	\begin{cjsection}{Solve the following systems of equations.}
+		\cjitem{}
+			\cjsystem{
+				2x + 3y = 4 \\
+				x - 2y = -5
+			}
+			\begin{cjsolution}
+				\cjwhy{\(2x + 3y = 4, -2x + 4y = 10\)}{Solve for \(y\)}
+				\cjcontinue{\(7y = 14\)}
+				\cjcontinue{\(y = 2\)}
+				\cjwhy{\(x - 2(2) = -5\)}{Solve for \(x\).}
+				\cjcontinue{\(x - 4 = -5\)}
+				\cjcontinue{\(x = -1\)}
+				\cjfa{\(x = -1, y = 2\)}
+			\end{cjsolution}
+
+		\cjitem{}
+			\cjsystem{
+				-\frac{1}{x} - \frac{3}{y} = 4 \\
+				\frac{2}{x} - \frac{1}{y} = 6
+			}
+			\begin{cjsolution}
+				\cjwhy{\(-\frac{2}{x} - \frac{6}{y} = 8, \frac{2}{x} - \frac{1}{y} = 6\)}{Solve for \(y\).}
+				\cjcontinue{\(-\frac{7}{y} = 14\)}
+				\cjcontinue{\(14y = -7\)}
+				\cjcontinue{\(y = -\frac{1}{2}\)}
+				\cjwhy{\(\frac{2}{x} - \frac{1}{-\frac{1}{2}} = 6\)}{Solve for \(x\).}
+				\cjcontinue{\(\frac{2}{x} + 2 = 6\)}
+				\cjcontinue{\(\frac{2}{x} = 4\)}
+				\cjcontinue{\(4x = 2\)}
+				\cjcontinue{\(x = \frac{1}{2}\)}
+				\cjfa{\(x = \frac{1}{2}, y = -\frac{1}{2}\)}
+			\end{cjsolution}
+
+		\cjitem{}
+			\cjsystem{
+				3x - y + 2z = 5 \\
+				x + 3y - z = -5 \\
+				x + y + z = 1
+			}
+			\begin{cjsolution}
+				\cjwhy{\(3x - y + 2z = 5, -3x - 3y - 3z = -3\)}{Eliminate \(x\).}
+				\cjcontinue{\(-4y - z = 2\)}
+				\cjwhy{\(x + 3y - z = -5, -x - y - z = -1\)}{Eliminate \(x\).}
+				\cjcontinue{\(2y - 2z = -6\)}
+				\cjwhy{\(-4y - z = 2, 4y - 4z = -12\)}{Solve for \(z\).}
+				\cjcontinue{\(-5z = -10\)}
+				\cjcontinue{\(z = 2\)}
+				\cjwhy{\(-4y - 2 = 2\)}{Solve for \(y\).}
+				\cjcontinue{\(-4y = 4\)}
+				\cjcontinue{\(y = -1\)}
+				\cjwhy{\(x - 1 + 2 = 1\)}{Solve for \(x\).}
+				\cjcontinue{\(x = 1 + 1 - 2\)}
+				\cjcontinue{\(x = 0\)}
+				\cjfa{\(x = 0, y = -1, z = 2\)}
+			\end{cjsolution}
+
+		\cjitem{}
+			\cjsystem{
+				x + 2y - z = 4 \\
+				3x - y + z = 5 \\
+				2x + 3y + 2z = 7 \\
+			}
+			\begin{cjsolution}
+				\cjwhy{\(x + 2y - z = 4, 3x - y + z = 5\)}{Eliminate \(z\).}
+				\cjcontinue{\(4x + y = 9\)}
+				\cjwhy{\(2x + 4y - 2z = 8, 2x + 3y + 2z = 7\)}{Eliminate \(z\).}
+				\cjcontinue{\(4x + 7y = 15\)}
+				\cjwhy{\(-4x - y = -9, 4x + 7y = 15\)}{Solve for \(y\).}
+				\cjcontinue{\(6y = 6\)}
+				\cjcontinue{\(y = 1\)}
+				\cjwhy{\(4x + 1 = 9\)}{Solve for \(x\).}
+				\cjcontinue{\(4x = 8\)}
+				\cjcontinue{\(x = 2\)}
+				\cjwhy{\(2 + 2(1) - z = 4\)}{Solve for \(z\).}
+				\cjcontinue{\(4 - z = 4\)}
+				\cjcontinue{\(z = 0\)}
+				\cjfa{\(x = 2, y = 1, z = 0\)}
+			\end{cjsolution}
+
+		\cjitem{}
+			\cjsystem{
+				3x + y = 9 \\
+				-2x + z = -7 \\
+				2y + 5z = -5 \\
+			}
+			\begin{cjsolution}
+				\cjwhy{\(6x + 2y = 18, -6x + 3z = -21\)}{Eliminate \(x\).}
+				\cjcontinue{\(2y + 3z = -3\)}
+				\cjwhy{\(2y + 5z = -5, -2y - 3z = 3\)}{Solve for \(z\).}
+				\cjcontinue{\(2z = -2\)}
+				\cjcontinue{\(z = -1\)}
+				\cjwhy{\(2y + 5(-1) = -5\)}{Solve for \(y\).}
+				\cjcontinue{\(2y - 5 = -5\)}
+				\cjcontinue{\(2y = 0\)}
+				\cjcontinue{\(y = 0\)}
+				\cjwhy{\(3x + 0 = 9\)}{Solve for \(x\).}
+				\cjcontinue{\(x = 3\)}
+				\cjfa{\(x = 3, y = 0, z = -1\)}
 			\end{cjsolution}
 	\end{cjsection}
 \end{document}

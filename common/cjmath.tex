@@ -71,7 +71,7 @@
 \newcommand*{\cjfa}[1]{\hline \(\Rightarrow\) #1 & Final answer. \\}
 \newcommand*{\cjfastep}[2]{\hline \(\Rightarrow\) #1 & Final answer. #2 \\}
 
-\newcommand{\cjsign}[1]{
+\newcommand*{\cjsign}[1]{
 	\hline & Create a table of signs. \\
 	\begin{adjustbox}{width=0.49\textwidth}
 		\begin{tikzpicture}
@@ -79,32 +79,6 @@
 		\end{tikzpicture}
 	\end{adjustbox} \\ \\
 }
-
-\newcommand*{\cjqed}{\(\blacksquare\)}
-
-\NewDocumentEnvironment{cjsolution}{+b}
-{
-	\begin{longtblr}
-	[
-		expand = \cjwhy\cjsubwhy\cjcontinue\cjfa\cjfastep\cjsign\cjgiven\cjsolsect\cjneeded
-	]
-	{
-		colspec = {|lX[r]|},
-		width = \textwidth
-	}
-		#1
-		& \cjqed{} \\
-		\hline
-	\end{longtblr}
-}{}
-
-\newcommand*{\cjdiv}{\divisionsymbol{}}
-\newcommand*{\cjexp}[1]{\times 10^{#1}}
-\newcommand*{\cjunit}[1]{\text{ #1}}
-\newcommand*{\cjceil}[1]{\lceil#1\rceil}
-\newcommand*{\cjlog}[2]{\text{log}_{#1} #2}
-
-
 
 \newcommand*{\cjgraph}[3]{
 	\begin{center}
@@ -118,3 +92,39 @@
 	\end{center}
 	\pagebreak
 }
+
+\newcommand*{\cjsystem}[1]{
+	\begin{equation*}
+		\begin{cases}
+			#1
+		\end{cases}
+	\end{equation*}
+}
+
+\newcommand*{\cjqed}{\(\blacksquare\)}
+
+
+
+\NewDocumentEnvironment{cjsolution}{+b}
+{
+	\begin{longtblr}
+	[
+		expand = \cjwhy\cjsubwhy\cjcontinue\cjfa\cjfastep\cjsign\cjgiven\cjsolsect\cjneeded\cjsystem
+	]
+	{
+		colspec = {|lX[r]|},
+		width = \textwidth
+	}
+		#1
+		& \cjqed{} \\
+		\hline
+	\end{longtblr}
+}{}
+
+
+
+\newcommand*{\cjdiv}{\divisionsymbol{}}
+\newcommand*{\cjexp}[1]{\times 10^{#1}}
+\newcommand*{\cjunit}[1]{\text{ #1}}
+\newcommand*{\cjceil}[1]{\lceil#1\rceil}
+\newcommand*{\cjlog}[2]{\text{log}_{#1} #2}
