@@ -80,5 +80,35 @@
 					\cjsubwhy{\(x = 2\sqrt{\frac{2}{3}}\)}{Solve for \(x, y = \sqrt{\frac{2}{3}}\)}
 					\cjfa{\((x, y) = \{(1, -2), (-1, 2), (-2\sqrt{\frac{2}{3}}, -\sqrt{\frac{2}{3}}), (2\sqrt{\frac{2}{3}}, \sqrt{\frac{2}{3}})\}\)}
 				\end{cjsolution}
+
+		\cjitem{Sketch the solution region for each of the given system of inequalities.}
+			\cjsubitem{}
+				\cjsystem{
+					y \le 2x + 1 \\
+					x < 5 \\
+					y < x + 2
+				}
+				\cjgraph{Figure 1.}{16}{
+					\pspolygon[fillstyle=vlines,hatchsep=8pt](-8.5,-17)(-8.5,-16)(1,3)(5,7)(5,-17)
+					\pstLineCoef[nodesep=-32,PointName={A_1,A_2}]{-2,1,-1}{A1}{A2}
+					\pstLineCoef[linestyle=dashed,nodesep=-32,PointName={B_1,B_2},PosAngle={-45,0}]{1,0,-5}{B1}{B2}
+					\pstLineCoef[linestyle=dashed,nodesep=-32,PointName={C_1,C_2},PosAngle=135]{-1,1,-2}{C1}{C2}
+				}
+
+			\cjsubitem{}
+				\cjsystem{
+					x^2 + y^2 \le 16 \\
+					y \le x^2 - 3 \\
+					y < 0
+				}
+				\cjgraph{Figure 2.}{16}{
+					\pspolygon[linestyle=none,fillstyle=vlines,hatchsep=8pt](-4,0)(-3.87298,-1)(-3.4641,-2)(-3,-2.64575)(-2,-3.4641)(-1,-3.87298)(0,-4)(1,-3.87298)(2,-3.4641)(3,-2.64575)(3.4641,-2)(3.87298,-1)(4,0)(1.73205,0)(1.3,-1.31)(1,-2)(0.5,-2.75)(0,-3)(-0.5,-2.75)(-1,-2)(-1.3,-1.31)(-1.73205,0)
+					\pstGeonode[PointName={A_1,A_2},PosAngle=45](0,0){A1}(4,0){A2}
+					\pstCircleOA{A1}{A2}
+					\pstGeonode[PosAngle=-45](0,-3){B}
+					\def\p{0.5}
+					\pstParabola(B){\p}{-16}{16}
+					\pstLineCoef[linestyle=dashed,linecolor=white,nodesep=-32,PointName={C_1,C_2},PosAngle={-45,45}]{0,1,0}{C1}{C2}
+				}
 	\end{cjsection}
 \end{document}
