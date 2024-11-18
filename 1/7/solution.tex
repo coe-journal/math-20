@@ -62,5 +62,67 @@
 					\cjcontinue{\({(y^2 - \frac{7}{2})}^2 = -1(x - \frac{49}{4})\)}
 					\cjfa{Parabola.}
 				\end{cjsolution}
+
+		\cjitem{Sketch the graph of the following hyperbolas.}
+			\cjsubitem{\(x^2 - 16y^2 = 40\)}
+				\begin{cjsolution}
+					\cjwhy{\(\frac{x^2}{40} - \frac{16y^2}{40} = 1\)}{Rewrite in standard form.}
+					\cjcontinue{\(\frac{x^2}{40} - \frac{y^2}{\frac{1}{16}(40)} = 1\)}
+					\cjcontinue{\(\frac{x^2}{40} - \frac{y^2}{\frac{5}{2}} = 1\)}
+					\cjcontinue{\(\frac{x^2}{\sqrt{40}^2} - \frac{y^2}{\sqrt{\frac{5}{2}}^2} = 1\)}
+					\cjcontinue{\(\frac{x^2}{{(\sqrt{4}\sqrt{10})}^2} - \frac{y^2}{\sqrt{\frac{5}{2}}^2} = 1\)}
+					\cjcontinue{\(\frac{x^2}{{(2\sqrt{10})}^2} - \frac{y^2}{\sqrt{\frac{5}{2}}^2} = 1\)}
+					\cjfastep{See Figure 1.}{Graph the hyperbola.}
+				\end{cjsolution}
+				\cjgraph{Figure 1. Graph of \(\frac{x^2}{{(2\sqrt{10})}^2} - \frac{y^2}{\sqrt{\frac{5}{2}}^2} = 1\).}{16}{
+					\pstGeonode[linecolor=red,PosAngle=45](0,0){C}
+					\def\a{6.32455}
+					\def\b{1.58113}
+					\pstHyperbola(C)(\a,\b)
+					\pstHyperbolaOrdNode[linecolor=blue,PointName={V_1,V_2},PosAngle={95,85}](C)(\a,\b){0}{V1}{V2}
+					\pstHyperbolaFocusNode[linecolor=red,PointName={F_1,F_2},PosAngle={148,32}](C)(\a,\b){F1}{F2}
+					\pstHyperbolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_{A_1},D_{A_2},D_{B_1},D_{B_2}},PosAngle={-30,0,-150,180}](C)(\a,\b){DA1}{DA2}{DB1}{DB2}
+				}
+
+			\cjsubitem{\(4y^2 - (x + 3)^2 = 16\)}
+				\begin{cjsolution}
+					\cjwhy{\(\frac{4y^2}{16} - \frac{(x + 3)^2}{16} = 1\)}{Rewrite in standard form.}
+					\cjcontinue{\(\frac{y^2}{4} - \frac{(x + 3)^2}{16} = 1\)}
+					\cjcontinue{\(\frac{y^2}{2^2} - \frac{(x + 3)^2}{4^2} = 1\)}
+					\cjfastep{See Figure 2.}{Graph the hyperbola.}
+				\end{cjsolution}
+				\cjgraph{Figure 2. Graph of \(\frac{y^2}{2^2} - \frac{(x + 3)^2}{4^2} = 1\).}{16}{
+					\pstGeonode[linecolor=red,PosAngle=45](-3, 0){C}
+					\def\a{2}
+					\def\b{4}
+					\pstIHyperbola(C)(\a,\b)
+					\pstIHyperbolaAbsNode[linecolor=blue,PointName={V_1,V_2},PosAngle={-90, 90}](C)(\a,\b){-3}{V1}{V2}
+					\pstIHyperbolaFocusNode[linecolor=red,PointName={F_1, F_2}, PosAngle={-90, 90}](C)(\a,\b){F1}{F2}
+					\pstIHyperbolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_{A_1},D_{A_2},D_{B_1},D_{B_2}},PosAngle={-135,-45,135,45}](C)(\a,\b){DA1}{DA2}{DB1}{DB2}
+				}
+
+			\cjsubitem{\(x^2 - y^2 + 6x - 4y = 4\)}
+				\begin{cjsolution}
+					\cjwhy{\(x^2 + 6x - y^2 - 4y = 4\)}{Group terms.}
+					\cjsubwhy{\(x^2 + 6x + 9 - y^2 - 4y = 4 + 9\)}{Complete the square.}
+					\cjcontinue{\(x^2 + 6x + 9 - y^2 - 4y = 13\)}
+					\cjcontinue{\({(x + 3)}^2 - y^2 - 4y = 13\)}
+					\cjcontinue{\({(x + 3)}^2 - (y^2 + 4y) = 13\)}
+					\cjsubwhy{\({(x + 3)}^2 - (y^2 + 4y + 4) = 13 - 4\)}{Complete the square.}
+					\cjcontinue{\({(x + 3)}^2 - (y^2 + 4y + 4) = 9\)}
+					\cjcontinue{\({(x + 3)}^2 - {(y + 2)}^2 = 9\)}
+					\cjsubwhy{\(\frac{{(x + 3)}^2}{9} - \frac{{(y + 2)}^2}{9} = 1\)}{Rewrite in standard form.}
+					\cjcontinue{\(\frac{{(x + 3)}^2}{3^2} - \frac{{(y + 2)}^2}{3^2} = 1\)}
+					\cjfastep{See Figure 3.}{Graph the hyperbola.}
+				\end{cjsolution}
+				\cjgraph{Figure 3. Graph of \(\frac{{(x + 3)}^2}{3^2} - \frac{{(y + 2)}^2}{3^2} = 1\).}{16}{
+					\pstGeonode[linecolor=red,PosAngle=90](-3, -2){C}
+					\def\a{3}
+					\def\b{3}
+					\pstHyperbola(C)(\a,\b)
+					\pstHyperbolaOrdNode[linecolor=blue,PointName={V_1,V_2},PosAngle={180,0}](C)(\a,\b){-2}{V1}{V2}
+					\pstHyperbolaFocusNode[linecolor=red,PointName={F_1,F_2},PosAngle={180,0}](C)(\a,\b){F1}{F2}
+					\pstHyperbolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_{A_1},D_{A_2},D_{B_1},D_{B_2}},PosAngle={0,0,180,180}](C)(\a,\b){DA1}{DA2}{DB1}{DB2}
+				}
 	\end{cjsection}
 \end{document}
