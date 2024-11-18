@@ -69,12 +69,12 @@
 					\cjwhy{\(\frac{x^2}{40} - \frac{16y^2}{40} = 1\)}{Rewrite in standard form.}
 					\cjcontinue{\(\frac{x^2}{40} - \frac{y^2}{\frac{1}{16}(40)} = 1\)}
 					\cjcontinue{\(\frac{x^2}{40} - \frac{y^2}{\frac{5}{2}} = 1\)}
-					\cjcontinue{\(\frac{x^2}{\sqrt{40}^2} - \frac{y^2}{\sqrt{\frac{5}{2}}^2} = 1\)}
-					\cjcontinue{\(\frac{x^2}{{(\sqrt{4}\sqrt{10})}^2} - \frac{y^2}{\sqrt{\frac{5}{2}}^2} = 1\)}
-					\cjcontinue{\(\frac{x^2}{{(2\sqrt{10})}^2} - \frac{y^2}{\sqrt{\frac{5}{2}}^2} = 1\)}
+					\cjcontinue{\(\frac{x^2}{\sqrt{40}^2} - \frac{y^2}{{(\sqrt{\frac{5}{2}})}^2} = 1\)}
+					\cjcontinue{\(\frac{x^2}{{(\sqrt{4}\sqrt{10})}^2} - \frac{y^2}{{(\sqrt{\frac{5}{2}})}^2} = 1\)}
+					\cjcontinue{\(\frac{x^2}{{(2\sqrt{10})}^2} - \frac{y^2}{{(\sqrt{\frac{5}{2}})}^2} = 1\)}
 					\cjfastep{See Figure 1.}{Graph the hyperbola.}
 				\end{cjsolution}
-				\cjgraph{Figure 1. Graph of \(\frac{x^2}{{(2\sqrt{10})}^2} - \frac{y^2}{\sqrt{\frac{5}{2}}^2} = 1\).}{16}{
+				\cjgraph{Figure 1. Graph of \(\frac{x^2}{{(2\sqrt{10})}^2} - \frac{y^2}{{(\sqrt{\frac{5}{2}})}^2} = 1\).}{16}{
 					\pstGeonode[linecolor=red,PosAngle=45](0,0){C}
 					\def\a{6.32455}
 					\def\b{1.58113}
@@ -122,7 +122,25 @@
 					\pstHyperbola(C)(\a,\b)
 					\pstHyperbolaOrdNode[linecolor=blue,PointName={V_1,V_2},PosAngle={180,0}](C)(\a,\b){-2}{V1}{V2}
 					\pstHyperbolaFocusNode[linecolor=red,PointName={F_1,F_2},PosAngle={180,0}](C)(\a,\b){F1}{F2}
-					\pstHyperbolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_{A_1},D_{A_2},D_{B_1},D_{B_2}},PosAngle={0,0,180,180}](C)(\a,\b){DA1}{DA2}{DB1}{DB2}
+					\ps2HyperbolaDirectrixLine[linecolor=red,nodesepA=-32,nodesepB=-32,PointName={D_{A_1},D_{A_2},D_{B_1},D_{B_2}},PosAngle={0,0,180,180}](C)(\a,\b){DA1}{DA2}{DB1}{DB2}
 				}
+
+		\cjitem{Find an equation of the hyperbola having \((2, 1)\) and \((-2, 1)\) as its foci and
+		has a conjugate axis of length 3.}
+			\begin{cjsolution}
+				\cjwhy{\(h = \frac{2 + -2}{2}, k = 1\)}{This is a hyperbola with a horizontal transverse axis (from the changing x-coordinate of its foci).
+				\(h\) can be found by averaging the x-coordinates of the foci, and \(k\) is simply equivalent to the y-coordinates of the foci.}
+				\cjcontinue{\(h = 0, k = 1\)}
+				\cjwhy{\(0 - c = 2\)}{Find \(c\) using \(F_1(h - c, k)\).}
+				\cjcontinue{\(c = -2\)}
+				\cjwhy{\(b = \frac{3}{2}\)}{By definition, \(b\) is half the length of the conjugate axis.}
+				\cjwhy{\({(-2)}^2 = a^2 + {(\frac{3}{2})}^2\)}{Find \(a\) using \(c^2 = a^2 + b^2\).}
+				\cjcontinue{\(4 = a^2 + \frac{9}{4}\)}
+				\cjcontinue{\(a^2 = 4 - \frac{9}{4}\)}
+				\cjcontinue{\(a^2 = \frac{16}{4} - \frac{9}{4}\)}
+				\cjcontinue{\(a^2 = \frac{7}{4}\)}
+				\cjcontinue{\(a = \sqrt{\frac{7}{4}}\)}
+				\cjfastep{\(\frac{x^2}{{(\sqrt{\frac{7}{4}})}^2} - \frac{{(y - 1)}^2}{{(\frac{3}{2})}^2} = 1\)}{Write the hyperbola equation using \((h, k)\), \(a\), and \(b\).}
+			\end{cjsolution}
 	\end{cjsection}
 \end{document}
