@@ -1,0 +1,84 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{Linear Inequalities System, Nonlinear Systems}
+
+	\begin{cjsection}{}
+		\cjitem{Solve algebraically for the solution sets of the following systems of equations.}
+			\cjsubitem{}
+				\cjsystem{
+					y = x^2 - 2x - 8 \\
+					4x + 3y + 3 = 0
+				}
+				\begin{cjsolution}
+					\cjwhy{\(3y = -4x - 3\)}{Rewrite in terms of \(y\).}
+					\cjcontinue{\(y = -\frac{4}{3}x - 1\)}
+					\cjwhy{\(x^2 - 2x - 8 = -\frac{4}{3}x - 1\)}{Solve for \(x\).}
+					\cjcontinue{\(x^2 - 2x + \frac{4}{3}x - 8 + 1 = 0\)}
+					\cjcontinue{\(x^2 - \frac{6}{3}x + \frac{4}{3}x - 7 = 0\)}
+					\cjcontinue{\(x^2 - \frac{2}{3}x - 7 = 0\)}
+					\cjcontinue{\(3x^2 - 2x - 21 = 0\)}
+					\cjsubwhy{\(3x^2 - 9x + 7x - 21 = 0\)}{Factor by grouping.}
+					\cjcontinue{\(3x(x - 3) + 7(x - 3) = 0\)}
+					\cjcontinue{\((3x + 7)(x - 3) = 0\)}
+					\cjcontinue{\(x \in \{-\frac{7}{3}, 3\}\)}
+					\cjwhy{\(4(-\frac{7}{3}) + 3y + 3 = 0\)}{Solve for \(y, x = -\frac{7}{3}\)}
+					\cjcontinue{\(-\frac{28}{3} + 3y + 3 = 0\)}
+					\cjcontinue{\(-\frac{28}{3} + 3y + \frac{9}{3} = 0\)}
+					\cjcontinue{\(3y - \frac{19}{3} = 0\)}
+					\cjcontinue{\(3y = \frac{19}{3}\)}
+					\cjcontinue{\(y = \frac{19}{9}\)}
+					\cjwhy{\(4(3) + 3y + 3 = 0\)}{Solve for \(y, x = 3\)}
+					\cjcontinue{\(12 + 3y + 3 = 0\)}
+					\cjcontinue{\(3y + 15 = 0\)}
+					\cjcontinue{\(3y = -15\)}
+					\cjcontinue{\(y = -5\)}
+					\cjfa{\((x, y) \in \{(-\frac{7}{3}, \frac{19}{9}), (3, -5)\}\)}
+				\end{cjsolution}
+
+			\cjsubitem{}
+				\cjsystem{
+					10x^2 - xy + 4y^2 = 28 \\
+					2x^2 - 3xy - 2y^2 = 0
+				}
+				\begin{cjsolution}
+					\cjwhy{\(2x^2 - 3yx - 2y^2 = 0\)}{Rewrite in terms of \(x\).}
+					\cjsubwhy{\(\frac{3y \pm \sqrt{{(3y)}^2 - 4(2)(-2y^2)}}{4}\)}{Use the quadratic formula.}
+					\cjcontinue{\(\frac{3y \pm \sqrt{9y^2 + 16y^2}}{4}\)}
+					\cjcontinue{\(\frac{3y \pm \sqrt{25y^2}}{4}\)}
+					\cjcontinue{\(\frac{3y \pm 5y}{4}\)}
+					\cjcontinue{\(\frac{3y + 5y}{4}, \frac{3y - 5y}{4}\)}
+					\cjcontinue{\(\frac{8y}{4}, \frac{-2y}{4}\)}
+					\cjcontinue{\(x \in \{-\frac{1}{2}y, 2y\}\)}
+					\cjwhy{\(10{(-\frac{1}{2}y)}^2 - (-\frac{1}{2}y)y + 4y^2 = 28\)}{Solve for \(y, x = -\frac{1}{2}y\).}
+					\cjcontinue{\(10(\frac{1}{4}y^2) + \frac{1}{2}y^2 + 4y^2 = 28\)}
+					\cjcontinue{\(\frac{5}{2}y^2 + \frac{1}{2}y^2 + 4y^2 = 28\)}
+					\cjcontinue{\(\frac{5}{2}y^2 + \frac{1}{2}y^2 + \frac{8}{2}y^2 = 28\)}
+					\cjcontinue{\(\frac{14}{2}y^2 = 28\)}
+					\cjcontinue{\(7y^2 = 28\)}
+					\cjcontinue{\(y^2 = 4\)}
+					\cjcontinue{\(y = \pm 2\)}
+					\cjwhy{\(x = -\frac{1}{2}(-2)\)}{Solve for \(x, y = -2\)}
+					\cjcontinue{\(x = 1\)}
+					\cjsubwhy{\(x = -\frac{1}{2}(2)\)}{Solve for \(x, y = 2\)}
+					\cjcontinue{\(x = -1\)}
+					\cjwhy{\(10{(2y)}^2 - (2y)y + 4y^2 = 28\)}{Solve for \(y, x = 2y\).}
+					\cjcontinue{\(10{(4y^2)} - 2y^2 + 4y^2 = 28\)}
+					\cjcontinue{\(40y^2 - 2y^2 + 4y^2 = 28\)}
+					\cjcontinue{\(42y^2 = 28\)}
+					\cjcontinue{\(y^2 = \frac{28}{42}\)}
+					\cjcontinue{\(y^2 = \frac{2}{3}\)}
+					\cjcontinue{\(y = \pm \sqrt{\frac{2}{3}}\)}
+					\cjwhy{\(x = -2\sqrt{\frac{2}{3}}\)}{Solve for \(x, y = -\sqrt{\frac{2}{3}}\)}
+					\cjsubwhy{\(x = 2\sqrt{\frac{2}{3}}\)}{Solve for \(x, y = \sqrt{\frac{2}{3}}\)}
+					\cjfa{\((x, y) = \{(1, -2), (-1, 2), (-2\sqrt{\frac{2}{3}}, -\sqrt{\frac{2}{3}}), (2\sqrt{\frac{2}{3}}, \sqrt{\frac{2}{3}})\}\)}
+				\end{cjsolution}
+	\end{cjsection}
+\end{document}
