@@ -111,5 +111,42 @@
 				\cjcontinue{\((g \circ h)(x) = \frac{(\sqrt{3x - 1} + 3)(\sqrt{3x - 1} - 2)}{3x - 5}\)}
 				\cjcontinue{\(\text{dom}(g \circ h) = [\frac{1}{3}, +\infty) \setminus \{\frac{5}{3}\}\)}
 			\end{cjsolution}
+
+		\cjitem{}
+			A ball is thrown upward from the roof of a building that is 30 meters high. If it
+			is known that the position of the ball with respect to the ground after \(x\) seconds is
+			\(h(x) = -5x^2 + 20x + 30\) meters, determine the maximum height reached by the ball, and
+			how long it takes before the ball hits the ground.
+			\begin{cjsolution}
+				\cjsolsect{Let}
+				\cjgiven{\(M\)}{Maximum height.}
+				\cjgiven{\(t\)}{Time to hit the ground.}
+				\cjwhy{\(-5x^2 + 20x + 30 = y\)}{The trajectory of a ball is most likely a parabola. Rewrite \(h(x)\) in standard form and in terms of \(y\).}
+				\cjcontinue{\(-5x^2 + 20x = y - 30\)}
+				\cjcontinue{\(-5(x^2 - 4x) = y - 30\)}
+				\cjcontinue{\(-5(x^2 - 4x + 4) = y - 30 - 5(4)\)}
+				\cjcontinue{\(-5(x^2 - 4x + 4) = y - 30 - 20\)}
+				\cjcontinue{\(-5(x^2 - 4x + 4) = y - 50\)}
+				\cjcontinue{\(-5{(x - 2)}^2 = y - 50\)}
+				\cjcontinue{\({(x - 2)}^2 = (-\frac{1}{5}){y - 50}\)}
+				\cjcontinue{\({(x - 2)}^2 = 4(-\frac{1}{20}){y - 50}\)}
+				\cjwhy{\(-5x^2 + 20x + 30 = 0\)}{The x-intercept of the function is the time is takes for the ball to hit the ground.}
+				\cjsubwhy{\(x = \frac{-20 \pm \sqrt{{(-20)}^2 - 4(-5)(30)}}{2(-5)}\)}{Use the quadratic formula.}
+				\cjcontinue{\(x = \frac{-20 \pm \sqrt{400 + 600}}{-10}\)}
+				\cjcontinue{\(x = \frac{-20 \pm \sqrt{1000}}{-10}\)}
+				\cjcontinue{\(x = \frac{-20 \pm \sqrt{100}\sqrt{10}}{-10}\)}
+				\cjcontinue{\(x = \frac{-20 \pm 10\sqrt{10}}{-10}\)}
+				\cjcontinue{\(x = 2 \pm \sqrt{10}\)}
+				\cjsubwhy{\(x = 2 + \sqrt{10}\)}{We only care about the cases where \(x \ge 0\) since we can't reverse time.}
+				\cjfastep{\(M = 10\cjunit{meters}\)}{The maximum height is the y-coordinate of the vertex of the parabola.}
+				\cjcontinue{\(t = 2 + \sqrt{10}\cjunit{seconds}\)}
+				\cjcontinue{See Figure 2 for a visualization.}
+			\end{cjsolution}
+			\cjgraph{Figure 2. Zoom in to see labels.}{75}{
+				\pstGeonode(2, 50){V}
+				\def\p{-0.1}
+				\pstParabola(V){\p}{-2}{16}
+				\pstGeonode[PointName=x_i,PosAngle=45](5.16227, 0){xi}
+			}
 	\end{cjsection}
 \end{document}
