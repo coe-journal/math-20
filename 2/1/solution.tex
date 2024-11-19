@@ -1,0 +1,76 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{Functions, Graphs, Symmetry}
+
+	\begin{cjsection}{}
+		\cjitem{Transform each of the following real-valued functions to a functional notation \(f(x)\);
+		find its domain and range; and compute \(f(1)\).}
+			\cjsubitem{\(f\) assigns the number \(10\) to any one-digit integer.}
+				\begin{cjsolution}
+					\cjfa{\(f(x) = 10\)}
+					\cjsubwhy{\(\text{dom}(f) = [-9, 9]\)}{The domain is the set of one digit integers.}
+					\cjsubwhy{\(\text{ran}(f) = 10\)}{The function can only equate to \(10\).}
+					\cjcontinue{\(f(1) = 10\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(f\) maps a given real number to the real number that is \(4\) more than its square root.}
+				\begin{cjsolution}
+					\cjfastep{\(f(x) = \sqrt{x} + 4\)}{Assuming that only the principal root is needed.}
+					\cjsubwhy{\(\text{dom}(f) = [0, +\infty)\)}{The square root of a negative number cannot be real.}
+					\cjcontinue{\(\text{ran}(f) = [4, +\infty]\)}
+					\cjcontinue{\(f(1) \in \{3, 5\}\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\{(x, y) \mid y = \frac{1}{6 - x}\}\)}
+				\begin{cjsolution}
+					\cjfa{\(f(x) = \frac{1}{6 - x}\)}
+					\cjsubwhy{\(\text{dom}(f) = \mathbb{R} \setminus \{6\}\)}{\(x = 6\) is an undefined point.}
+					\cjcontinue{\(\text{ran}(f) = \mathbb{R}\)}
+					\cjcontinue{\(f(1) = \frac{1}{5}\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\{(x, y) \mid y = \sqrt{x^2 - 5x + 6}\}\)}
+				\begin{cjsolution}
+					\cjwhy{\((x - 2)(x - 3) \ge 0\)}{Find the domain by solving \(x^2 - 5x + 6 \ge 0\); factor by grouping.}
+					\cjsign{
+						\tkzTabInit[lgt=3, espcl=2, deltacl=0]
+							{/.8, \(x - 2\) /.8, \(x - 3\) /.8, \((x - 2)(x - 3)\) /.8}
+							{,\(2\),\(3\),}
+						\tkzTabLine{,-,t,+,t,+,}
+						\tkzTabLine{,-,t,-,t,+,}
+						\tkzTabLine{,+,t,-,t,+,}
+					}
+					\cjcontinue{\(x \in (-\infty, 2] \cup [3, +\infty)\)}
+					\cjfa{\(f(x) = \sqrt{x^2 - 5x + 6}\)}
+					\cjcontinue{\(\text{dom}(f) = (-\infty, 2] \cup [3, +\infty)\)}
+					\cjcontinue{\(\text{ran}(f) = [0, +\infty)\)}
+					\cjcontinue{\(f(1) = \sqrt{2}\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\{(x, y) \mid y = \frac{1}{\sqrt[3]{x^2 - 1}}\}\)}
+				\begin{cjsolution}
+					\cjwhy{\((x - 1)(x + 1) = 0\)}{Find undefined points by solving \(x^2 - 1 = 0\); factor using difference of two squares.}
+					\cjcontinue{\(x \in \{-1, 1\}\)}
+					\cjwhy{\(x = \frac{1}{\sqrt[3]{y^2 - 1}}\)}{Find the inverse function.}
+					\cjcontinue{\(\frac{1}{x} = \sqrt[3]{y^2 - 1}\)}
+					\cjcontinue{\(\frac{1}{x^3} = y^2 - 1\)}
+					\cjcontinue{\(y^2 = \frac{1}{x^3} + 1\)}
+					\cjcontinue{\(y^2 = \frac{1}{x^3} + \frac{x^3}{x^3}\)}
+					\cjcontinue{\(y^2 = \frac{1 + x^3}{x^3}\)}
+					\cjcontinue{\(f'(x) = \pm \sqrt{\frac{1 + x^3}{x^3}}\)}
+					\cjwhy{\(\text{dom}(f') = (-\infty, -1] \cup (0, +\infty)\)}{Find the domain of the inverse function; 0 is also an undefined point.}
+					\cjfa{\(f(x) = \frac{1}{\sqrt[3]{x^2 - 1}}\)}
+					\cjcontinue{\(\text{dom}(f) = \mathbb{R} \setminus \{-1, 1\}\)}
+					\cjcontinue{\(\text{ran}(f) = (-\infty, -1] \cup (0, +\infty)\)}
+					\cjcontinue{\(f(1)\) is undefined.}
+				\end{cjsolution}
+	\end{cjsection}
+\end{document}
