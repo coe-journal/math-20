@@ -26,7 +26,7 @@
 					\cjfastep{\(f(x) = \sqrt{x} + 4\)}{Assuming that only the principal root is needed.}
 					\cjsubwhy{\(\text{dom}(f) = [0, +\infty)\)}{The square root of a negative number cannot be real.}
 					\cjcontinue{\(\text{ran}(f) = [4, +\infty]\)}
-					\cjcontinue{\(f(1) \in \{3, 5\}\)}
+					\cjcontinue{\(f(1) = 5\)}
 				\end{cjsolution}
 
 			\cjsubitem{\(\{(x, y) \mid y = \frac{1}{6 - x}\}\)}
@@ -66,7 +66,16 @@
 					\cjcontinue{\(y^2 = \frac{1}{x^3} + \frac{x^3}{x^3}\)}
 					\cjcontinue{\(y^2 = \frac{1 + x^3}{x^3}\)}
 					\cjcontinue{\(f'(x) = \pm \sqrt{\frac{1 + x^3}{x^3}}\)}
-					\cjwhy{\(\text{dom}(f') = (-\infty, -1] \cup (0, +\infty)\)}{Find the domain of the inverse function; 0 is also an undefined point.}
+					\cjsubwhy{\(\sqrt{\frac{1 + x^3}{x^3}} > 0\)}{Solve for the domain. Note that \(x = 0\) is an undefined point.}
+					\cjsign{
+						\tkzTabInit[lgt=2, espcl=2, deltacl=0]
+							{/.8, \(1 + x^3\) /.8, \(x^3\) /.8, \(\sqrt{\frac{1 + x^3}{x^3}}\) /.8}
+							{,\(-1\),\(0\),}
+						\tkzTabLine{,-,t,+,t,+,}
+						\tkzTabLine{,-,t,-,t,+,}
+						\tkzTabLine{,+,t,-,t,+,}
+					}
+					\cjcontinue{\(\text{dom}(f') = (-\infty, -1] \cup (0, +\infty)\)}
 					\cjfa{\(f(x) = \frac{1}{\sqrt[3]{x^2 - 1}}\)}
 					\cjcontinue{\(\text{dom}(f) = \mathbb{R} \setminus \{-1, 1\}\)}
 					\cjcontinue{\(\text{ran}(f) = (-\infty, -1] \cup (0, +\infty)\)}
