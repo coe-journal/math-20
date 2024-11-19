@@ -81,5 +81,37 @@
 					\cjcontinue{\(\text{ran}(f) = (-\infty, -1] \cup (0, +\infty)\)}
 					\cjcontinue{\(f(1)\) is undefined.}
 				\end{cjsolution}
+
+		\cjitem{Given \(f(x) = \frac{4 - x^2}{x - 2}\)}
+			\cjsubitem{Find \(\text{dom}(f)\) and solve for its zeroes.}
+				\begin{cjsolution}
+					\cjwhy{\(\frac{(2 - x)(2 + x)}{x - 2} = 0\)}{Factor using difference of two squares.}
+					\cjcontinue{\(\frac{-(x - 2)(2 + x)}{x - 2} = 0\)}
+					\cjsubwhy{\(-(2 + x) = 0\)}{\(x = 2\) is an undefined point.}
+					\cjcontinue{\(-2 - x = 0\)}
+					\cjcontinue{\(x = -2\)}
+					\cjfa{\(\text{dom}(f) = \mathbb{R} \setminus \{2\}\)}
+					\cjcontinue{\(x = -2\)}
+				\end{cjsolution}
+
+			\cjsubitem{Is the function odd or even? Justify your answer algebraically.}
+				\begin{cjsolution}
+					\cjwhy{\(f(x) = -2 - x, f(-x) = -2 + x\)}{Check if the function is even. Note the simplified function, \(f(x) = -2 - x\).}
+					\cjcontinue{\(f(-x) \neq f(x)\)}
+					\cjcontinue{Not even.}
+					\cjwhy{\(-f(x) = -(-2 - x)\)}{Find \(-f(x)\).}
+					\cjcontinue{\(-f(x) = 2 + x\)}
+					\cjcontinue{\(f(-x) \neq -f(x)\)}
+					\cjcontinue{Not odd.}
+					\cjfa{Neither even nor odd.}
+				\end{cjsolution}
+
+			\cjsubitem{Determine its x- and y- intercepts.}
+				\begin{cjsolution}
+					\cjwhy{\(x_i = -2\)}{The zeroes of a function are its x-intercepts.}
+					\cjwhy{\(y = -2 - 0\)}{Find the y-intercepts. Use the simplified function.}
+					\cjcontinue{\(y_i = -2\)}
+					\cjfa{\(x_i = -2, y_i = -2\)}
+				\end{cjsolution}
 	\end{cjsection}
 \end{document}
