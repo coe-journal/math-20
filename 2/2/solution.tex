@@ -1,0 +1,115 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{Some Types of Functions, Operations}
+
+	\begin{cjsection}{}
+		\cjitem{}
+			Given
+			\cjsystem{g(x) = }{
+				x + 4,   & \text{if } x < -2 \\
+				\abs{x}, & \text{if } -1 < x < 1 \\
+				2,       & \text{if } x > 3
+			}
+			Sketch its graph and label its x- and y- intercepts.
+			\begin{cjsolution}
+				\cjwhy{\(0 = x + 4\)}{Find the x-intercepts of \(y = x + 4\)}
+				\cjcontinue{\(x_i = -4\)}
+				\cjsubwhy{\(0 = \abs{x}\)}{Find the x-intercepts of \(y = \abs{x}\)}
+				\cjcontinue{\(x_i = 0\)}
+				\cjwhy{\(y = \abs{0}\)}{Find the y-intercepts of \(y = \abs{x}\)}
+				\cjcontinue{\(y_i = 0\)}
+				\cjfastep{See Figure 1.}{Graph the system.}
+			\end{cjsolution}
+			\cjgraph{Figure 1.}{16}{
+				\pstGeonode[PointSymbol=o,PointName=none](-2, 2){A1}
+				\pstGeonode[PointSymbol=*,PointName=x_i,PosAngle=-45](-4, 0){A2}
+				\pstLineAB[nodesepA=0.1,nodesepB=-32]{A1}{A2}
+				\pstGeonode[PointSymbol=o,PointName=none](-1, 1){B1}
+				\pstGeonode[PointSymbol=*,PointName={x_i,y_i},PosAngle={-135, -45}](0, 0){B2}(0, 0){B3}
+				\pstGeonode[PointSymbol=o,PointName=none](1, 1){B4}
+				\pstLineAB[nodesepA=0.1]{B1}{B2}
+				\pstLineAB[nodesepA=0.1]{B4}{B3}
+				\pstGeonode[PointSymbol=o,PointName=none](3, 2){C1}
+				\pstGeonode[PointSymbol=none,PointName=none](4, 2){C2}
+				\pstLineAB[nodesepA=0.1,nodesepB=-32]{C1}{C2}
+			}
+
+		\cjitem{}
+			Let \(f\), \(g\), and \(h\) be the functions defined from the expressions below.
+			\[f(x) = \frac{x + 2}{x - 3}\]
+			\[g(x) = \frac{x + 3}{x + 2}\]
+			\[h(x) = \sqrt{3x - 1}\]
+			Determine \((f - g)(x)\), \((\frac{f}{g})(x)\), \((fg)(x)\), \((f \circ g)(x)\),
+			\((h \circ f)(x)\), \((g \circ h)(x)\) and obtain their respective domains.
+
+			\begin{cjsolution}
+				\cjwhy{\((f - g)(x) = \frac{x + 2}{x - 3} - \frac{x + 3}{x + 2}\)}{Find \((f - g)(x)\).}
+				\cjcontinue{\((f - g)(x) = \frac{(x + 2)(x + 2)}{(x - 3)(x + 2)} - \frac{(x - 3)(x + 3)}{(x - 3)(x + 2)}\)}
+				\cjcontinue{\((f - g)(x) = \frac{(x + 2)(x + 2) - (x - 3)(x + 3)}{(x - 3)(x + 2)}\)}
+				\cjcontinue{\((f - g)(x) = \frac{x^2 + 4x + 4 - (x^2 - 9)}{(x - 3)(x + 2)}\)}
+				\cjcontinue{\((f - g)(x) = \frac{x^2 + 4x + 4 - x^2 + 9}{(x - 3)(x + 2)}\)}
+				\cjcontinue{\((f - g)(x) = \frac{4x + 13}{(x - 3)(x + 2)}\)}
+				\cjcontinue{\(\text{dom}(f - g) = \mathbb{R} \setminus \{-2, 3\}\)}
+				\cjwhy{\((\frac{f}{g})(x) = \frac{\frac{x + 2}{x - 3}}{\frac{x + 3}{x + 2}}\)}{Find \((\frac{f}{g})(x)\).}
+				\cjcontinue{\((\frac{f}{g})(x) = \frac{x + 2}{x - 3} \cdot \frac{x + 2}{x + 3}\)}
+				\cjcontinue{\((\frac{f}{g})(x) = \frac{{(x + 2)}^2}{(x - 3)(x + 3)}\)}
+				\cjcontinue{\(\text{dom}(\frac{f}{g}) = \mathbb{R} \setminus \{-3, -2, 3\}\)}
+				\cjwhy{\((fg)(x) = \frac{x + 2}{x - 3} \cdot \frac{x + 3}{x + 2}\)}{Find \((fg)(x)\).}
+				\cjcontinue{\((fg)(x) = \frac{(x + 2)(x + 3)}{(x - 3)(x + 2)}\)}
+				\cjcontinue{\((fg)(x) = \frac{x + 3}{x - 3}\)}
+				\cjcontinue{\(\text{dom}(fg) = \mathbb{R} \setminus \{-2, 3\}\)}
+				\cjwhy{\((f \circ g)(x) = \frac{\frac{x + 3}{x + 2} + 2}{\frac{x + 3}{x + 2} - 3}\)}{Find \((f \circ g)(x)\).}
+				\cjcontinue{\((f \circ g)(x) = \frac{\frac{x + 3}{x + 2} + \frac{2x + 4}{x + 2}}{\frac{x + 3}{x + 2} - \frac{3x + 6}{x + 2}}\)}
+				\cjcontinue{\((f \circ g)(x) = \frac{\frac{x + 3 + (2x + 4)}{x + 2}}{\frac{x + 3 - (3x + 6)}{x + 2}}\)}
+				\cjcontinue{\((f \circ g)(x) = \frac{\frac{x + 3 + 2x + 4}{x + 2}}{\frac{x + 3 - 3x - 6}{x + 2}}\)}
+				\cjcontinue{\((f \circ g)(x) = \frac{\frac{3x + 7}{x + 2}}{\frac{-2x - 3}{x + 2}}\)}
+				\cjcontinue{\((f \circ g)(x) = \frac{3x + 7}{x + 2} \cdot \frac{x + 2}{-2x - 3}\)}
+				\cjcontinue{\((f \circ g)(x) = \frac{3x + 7}{-2x - 3}\)}
+				\cjcontinue{\(\text{dom}(f \circ g) = \mathbb{R} \setminus \{-2, -\frac{3}{2}\}\)}
+				\cjwhy{\((h \circ f)(x) = \sqrt{3(\frac{x + 2}{x - 3}) - 1}\)}{Find \((h \circ f)(x)\).}
+				\cjcontinue{\((h \circ f)(x) = \sqrt{\frac{3x + 6}{x - 3} - 1}\)}
+				\cjcontinue{\((h \circ f)(x) = \sqrt{\frac{3x + 6}{x - 3} - \frac{x - 3}{x - 3}}\)}
+				\cjcontinue{\((h \circ f)(x) = \sqrt{\frac{3x + 6 - (x - 3)}{x - 3}}\)}
+				\cjcontinue{\((h \circ f)(x) = \sqrt{\frac{3x + 6 - x + 3}{x - 3}}\)}
+				\cjcontinue{\((h \circ f)(x) = \sqrt{\frac{2x + 9}{x - 3}}\)}
+				\cjsubwhy{\(\frac{2x + 9}{x - 3} \ge 0\)}{Solve for the domain. Note that \(x = 3\) is undefined.}
+				\cjsign{
+					\tkzTabInit[lgt=2, espcl=2, deltacl=0]
+						{/.8, \(2x + 9\) /.8, \(x - 3\) /.8, \(\frac{2x + 9}{x - 3}\) /.8}
+						{,\(-\frac{9}{2}\),\(3\),}
+					\tkzTabLine{,-,t,+,t,+,}
+					\tkzTabLine{,-,t,-,t,+,}
+					\tkzTabLine{,+,t,-,t,+,}
+				}
+				\cjcontinue{\(\text{dom}(h \circ f) = (-\infty, -\frac{9}{2}] \cup (3, +\infty)\)}
+				\cjwhy{\((g \circ h)(x) = \frac{\sqrt{3x - 1} + 3}{\sqrt{3x - 1} + 2}\)}{Find \((g \circ h)(x)\).}
+				\cjsubwhy{\((g \circ h)(x) = \frac{\sqrt{3x - 1} + 3}{\sqrt{3x - 1} + 2} \cdot \frac{\sqrt{3x - 1} - 2}{\sqrt{3x - 1} - 2}\)}{Rationalize.}
+				\cjcontinue{\((g \circ h)(x) = \frac{(\sqrt{3x - 1} + 3)(\sqrt{3x - 1} - 2)}{3x - 1 - 4}\)}
+				\cjcontinue{\((g \circ h)(x) = \frac{(\sqrt{3x - 1} + 3)(\sqrt{3x - 1} - 2)}{3x - 5}\)}
+				\cjsubwhy{\(3x - 1 \ge 0\)}{Solve for the domain. Note that \(x = \frac{5}{3}\) is undefined.}
+				\cjcontinue{\(3x \ge 1\)}
+				\cjcontinue{\(x \ge \frac{1}{3}\)}
+				\cjcontinue{\(\text{dom}(g \circ h) = [\frac{1}{3}, +\infty) \setminus \{\frac{5}{3}\}\)}
+				\cjfa{\((f - g)(x) = \frac{4x + 13}{(x - 3)(x + 2)}\)}
+				\cjcontinue{\(\text{dom}(f - g) = \mathbb{R} \setminus \{-2, 3\}\)}
+				\cjcontinue{\((\frac{f}{g})(x) = \frac{{(x + 2)}^2}{(x - 3)(x + 3)}\)}
+				\cjcontinue{\(\text{dom}(\frac{f}{g}) = \mathbb{R} \setminus \{-3, -2, 3\}\)}
+				\cjcontinue{\((fg)(x) = \frac{x + 3}{x - 3}\)}
+				\cjcontinue{\(\text{dom}(fg) = \mathbb{R} \setminus \{-2, 3\}\)}
+				\cjcontinue{\((f \circ g)(x) = \frac{3x + 7}{-2x - 3}\)}
+				\cjcontinue{\(\text{dom}(f \circ g) = \mathbb{R} \setminus \{-2, -\frac{3}{2}\}\)}
+				\cjcontinue{\((h \circ f)(x) = \sqrt{\frac{2x + 9}{x - 3}}\)}
+				\cjcontinue{\(\text{dom}(h \circ f) = (-\infty, -\frac{9}{2}] \cup (3, +\infty)\)}
+				\cjcontinue{\((g \circ h)(x) = \frac{(\sqrt{3x - 1} + 3)(\sqrt{3x - 1} - 2)}{3x - 5}\)}
+				\cjcontinue{\(\text{dom}(g \circ h) = [\frac{1}{3}, +\infty) \setminus \{\frac{5}{3}\}\)}
+			\end{cjsolution}
+	\end{cjsection}
+\end{document}
