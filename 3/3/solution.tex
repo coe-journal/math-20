@@ -1,0 +1,79 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{Graphs of Circular Functions}
+
+	\begin{cjsection}{From the following sine waves, determine the amplitude, period, phase shift,
+	and vertical shift and then sketch one cycle of the graph. Label maximum and minimium points.}
+		\cjitem{\(f(x) = 2\text{cos}(\frac{1}{2}(x + \pi)) - 1\)}
+			\begin{cjsolution}
+				\cjfastep{\(a = 2\)}{\(f(x) = a\text{cos}(b(x - c)) + d\)}
+				\cjcontinue{\(b = \frac{1}{2}\)}
+				\cjcontinue{\(c = -\pi\)}
+				\cjcontinue{\(d = -1\)}
+				\cjsubwhy{\(M = 1\)}{\(\{M, m\} = \pm a - d\)}
+				\cjcontinue{\(m = -3\)}
+				\cjcontinue{See Figure 1.}
+			\end{cjsolution}
+			\cjgraph{Figure 1. Graph of \(f(x) = 2\text{cos}(\frac{1}{2}(x + \pi)) - 1\)}{16}{
+				\psplot[algebraic,plotpoints=500]{-16}{16}{2 * cos(0.5 * (x + 3.1416)) - 1}
+				\pstGeonode[PosAngle=90](-3.1416, 1){M}
+				\pstGeonode[PosAngle=-90](3.1416, -3){m}
+			}
+
+		\cjitem{\(f(x) = -\frac{3}{2}\text{sin}(\pi - 2x) + 2\)}
+			\begin{cjsolution}
+				\cjwhy{\(f(x) = -\frac{3}{2}\text{sin}(-2(x - \frac{\pi}{2})) + 2\)}{Rewrite in standard form.}
+				\cjfa{\(a = -\frac{3}{2}\)}
+				\cjcontinue{\(b = -2\)}
+				\cjcontinue{\(c = \frac{\pi}{2}\)}
+				\cjcontinue{\(d = 2\)}
+				\cjcontinue{\(M = \frac{7}{2}\)}
+				\cjcontinue{\(m = \frac{1}{2}\)}
+			\end{cjsolution}
+			\cjgraph{Figure 2. Graph of \(f(x) = -\frac{3}{2}\text{sin}(\pi - 2x) + 2\)}{16}{
+				\psplot[algebraic,plotpoints=500]{-16}{16}{-1.5 * sin(-2 * (x - 1.5708)) + 2}
+				\pstGeonode[PosAngle=90](-0.7854, 3.5){M}
+				\pstGeonode[PosAngle=-90](0.7854, 0.5){m}
+			}
+
+		\cjitem{\(f(x) = 4\text{sin}(4x - 3\pi)\)}
+			\begin{cjsolution}
+				\cjwhy{\(f(x) = 4\text{sin}(4(x - \frac{3\pi}{4}))\)}{Rewrite in standard form.}
+				\cjfa{\(a = 4\)}
+				\cjcontinue{\(b = 4\)}
+				\cjcontinue{\(c = \frac{3\pi}{4}\)}
+				\cjcontinue{\(d = 0\)}
+				\cjcontinue{\(M = 4\)}
+				\cjcontinue{\(m = -4\)}
+			\end{cjsolution}
+			\cjgraph{Figure 3. Graph of \(f(x) = 4\text{sin}(4x - 3\pi)\)}{16}{
+				\psplot[algebraic,plotpoints=1000]{-16}{16}{4 * sin(4 * (x - 2.3562))}
+				\pstGeonode[PosAngle=90](-0.3927, 4){M}
+				\pstGeonode[PosAngle=-90](0.3927, -4){m}
+			}
+
+		\cjitem{\(f(x) = -2\text{cos}(\frac{x}{2} - \frac{\pi}{4}) + 1\)}
+			\begin{cjsolution}
+				\cjwhy{\(f(x) = -2\text{cos}(\frac{1}{2}(x - \frac{\pi}{2})) + 1\)}{Rewrite in standard form.}
+				\cjfa{\(a = -2\)}
+				\cjcontinue{\(b = \frac{1}{2}\)}
+				\cjcontinue{\(c = \frac{\pi}{2}\)}
+				\cjcontinue{\(d = 1\)}
+				\cjcontinue{\(M = 3\)}
+				\cjcontinue{\(m = -1\)}
+			\end{cjsolution}
+			\cjgraph{Figure 3. Graph of \(f(x) = -2\text{cos}(\frac{x}{2} - \frac{\pi}{4}) + 1\)}{16}{
+				\psplot[algebraic,plotpoints=500]{-16}{16}{-2 * cos(0.5 * (x - 1.5708)) + 1}
+				\pstGeonode[PosAngle=90](-4.7124, 3){M}
+				\pstGeonode[PosAngle=-90](1.5708, -1){m}
+			}
+	\end{cjsection}
+\end{document}
