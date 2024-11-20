@@ -1,0 +1,97 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{Angles and Their Measure, Trigonometric Functions of Angles}
+
+	\begin{cjsection}{}
+		\cjitem{Complete the following table.}
+			\begin{longtblr}{|c|c|c|}
+				\hline rev & deg & rad \\
+				\hline \(\frac{1}{20}\) & \(18\degree\) & \(\frac{\pi}{10}\) \\
+				\hline \(-\frac{2}{3}\) & \(-240\degree\) & \(-\frac{4\pi}{3}\) \\
+				\hline
+			\end{longtblr}
+
+		\cjitem{Marian eats one slice of a circular pie that is cut into six congruent
+		slices. If the arclength of the side she ate is \(24\pi\) inches, what is the
+		radius of the pie?}
+			\begin{cjsolution}
+				\cjwhy{\(\theta = \frac{2\pi}{6}\)}{The pie is sliced into 6 pieces.}
+				\cjcontinue{\(\theta = \frac{\pi}{3}\)}
+				\cjwhy{\(24\pi = r(\frac{\pi}{3})\)}{\(s = r\theta\)}
+				\cjcontinue{\(r = \frac{24\pi}{\frac{\pi}{3}}\)}
+				\cjcontinue{\(r = \frac{24\pi(3)}{\pi}\)}
+				\cjfa{\(r = 72\cjunit{inches}\)}
+			\end{cjsolution}
+
+		\cjitem{If the terminal side of an angle \(\theta > 0\) contains the point \((1, -4\sqrt{3})\),
+		find the six trigonometric functions of \(\theta\).}
+			\begin{cjsolution}
+				\cjwhy{\(r = \sqrt{1^2 + {(-4\sqrt{3})}^2}\)}{Use the Pythagorean Theorem to find \(r\).}
+				\cjcontinue{\(r = \sqrt{1 + 16(3)}\)}
+				\cjcontinue{\(r = \sqrt{1 + 48}\)}
+				\cjcontinue{\(r = \sqrt{49}\)}
+				\cjcontinue{\(r = 7\)}
+				\cjfastep{\(\text{cos}(\theta) = \frac{1}{7}\)}{\(\text{cos}(\theta) = \frac{x}{r}\)}
+				\cjsubwhy{\(\text{sin}(\theta) = -\frac{4\sqrt{3}}{7}\)}{\(\text{sin}(\theta) = \frac{y}{r}\)}
+				\cjsubwhy{\(\text{tan}(\theta) = -4\sqrt{3}\)}{\(\text{sin}(\theta) = \frac{y}{x}\)}
+				\cjsubwhy{\(\text{cot}(\theta) = -\frac{1}{4\sqrt{3}} = -\frac{\sqrt{3}}{12}\)}{\(\text{sin}(\theta) = \frac{x}{y}\)}
+				\cjsubwhy{\(\text{sec}(\theta) = 7\)}{\(\text{sec}(\theta) = \frac{r}{x}\)}
+				\cjsubwhy{\(\text{csc}(\theta) = -\frac{7}{4\sqrt{3}} = -\frac{7\sqrt{3}}{12}\)}{\(\text{csc}(\theta) = \frac{r}{y}\)}
+			\end{cjsolution}
+
+		\cjitem{Find the six trigonometric functions of \(\alpha\) if \(\text{cos}(\alpha) = -\frac{5}{13}\)
+		and \(\alpha\) is in Quadrant III.}
+			\begin{cjsolution}
+				\cjwhy{\(x = -5, r = 13\)}{\(\text{cos}(\theta) = \frac{x}{r}\)}
+				\cjsubwhy{\(y = -\sqrt{13^2 - {(-5)}^2}\)}{Use the Pythagorean Theorem to find \(y\). Since we're in Quadrant III, we want the negative case.}
+				\cjcontinue{\(y = -\sqrt{169 - 25}\)}
+				\cjcontinue{\(y = -\sqrt{144}\)}
+				\cjcontinue{\(y = -12\)}
+				\cjfastep{\(\text{sin}(\theta) = -\frac{12}{13}\)}{\(\text{sin}(\theta) = \frac{y}{r}\)}
+				\cjsubwhy{\(\text{tan}(\theta) = \frac{-\frac{12}{13}}{-\frac{5}{13}} = \frac{12}{5}\)}{\(\text{tan}(\theta) = \frac{y}{x}\)}
+				\cjsubwhy{\(\text{cot}(\theta) = \frac{5}{12}\)}{\(\text{cot}(\theta) = \frac{1}{\text{tan}(\theta)}\)}
+				\cjsubwhy{\(\text{sec}(\theta) = -\frac{13}{5}\)}{\(\text{sec}(\theta) = \frac{1}{\text{cos}(\theta)}\)}
+				\cjsubwhy{\(\text{csc}(\theta) = -\frac{13}{12}\)}{\(\text{csc}(\theta) = \frac{1}{\text{sin}(\theta)}\)}
+			\end{cjsolution}
+
+		\cjitem{Evaluate the following.}
+			\cjsubitem{\(\text{csc}(315\degree)\)}
+				\begin{cjsolution}
+					\cjwhy{\(\overline{\theta} = 360\degree - 315\degree\)}{Find the reference angle.}
+					\cjcontinue{\(\overline{\theta} = 45\degree\)}
+					\cjsubwhy{\(\text{sin}(315\degree) = -\text{sin}(45\degree) = -\frac{\sqrt{2}}{2}\)}{Since \(315\degree\) is in QIV, the result of sin will be negative.}
+					\cjfastep{\(\text{csc}(315\degree) = -\sqrt{2}\)}{\(\text{csc}(\theta) = \frac{1}{\text{sin}(\theta)}\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\text{cot}(420\degree)\)}
+				\begin{cjsolution}
+					\cjwhy{\(\theta = 60\degree\)}{Since \(420\degree > 360\degree\), find \(420\degree \text{ mod } 360\degree\).}
+					\cjsubwhy{\(\text{cos}(60\degree) = \frac{1}{2}, \text{sin}(60\degree) = \frac{\sqrt{3}}{2}\)}{Find \(\text{cos}(\theta)\) and \(\text{sin}(\theta)\). Both will be positive since \(60\degree\) is in QI.}
+					\cjsubwhy{\(\text{cot}(\theta) = \frac{\frac{1}{2}}{\frac{\sqrt{3}}{2}}\)}{\(\text{cot}(\theta) = \frac{\text{cos}(\theta)}{\text{sin}(\theta)}\)}
+					\cjcontinue{\(\text{cot}(\theta) = \frac{2}{2\sqrt{3}}\)}
+					\cjsubwhy{\(\text{cot}(\theta) = \frac{2\sqrt{3}}{2(3)}\)}{Rationalize.}
+					\cjfa{\(\text{cot}(\theta) = \frac{\sqrt{3}}{3}\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\text{tan}(\frac{5}{8}\cjunit{rev})\text{cos}(660\degree)\)}
+				\begin{cjsolution}
+					\cjwhy{\(\theta_1 = \frac{5}{8}(2\pi)\)}{Convert from revolutions to radians.}
+					\cjcontinue{\(\theta_1 = \frac{10\pi}{8}\)}
+					\cjcontinue{\(\theta_1 = \frac{5\pi}{4}\)}
+					\cjsubwhy{\(\text{tan}(\frac{5\pi}{4}) = 1\)}{Since \(\theta_1\) is in QIII, tan will be positive.}
+					\cjwhy{\(\theta_2 = 300\)}{Find \(660\degree \text{ mod } 360\degree\).}
+					\cjsubwhy{\(\overline{\theta_2} = 360 - 300\)}{Find the reference angle.}
+					\cjcontinue{\(\overline{\theta_2} = 60\)}
+					\cjsubwhy{\(\text{cos}(660) = \text{cos}(60) = \frac{1}{2}\)}{Since \(\theta_2\) is in QIV, cos will be positive.}
+					\cjfa{\(\text{tan}(\frac{5}{8}\cjunit{rev})\text{cos}(660\degree) = \frac{1}{2}\)}
+				\end{cjsolution}
+	\end{cjsection}
+\end{document}
