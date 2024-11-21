@@ -1,0 +1,48 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <novoseiversia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+\documentclass{article}
+
+\input{../../common/cjmath.tex}
+
+
+
+\begin{document}
+	\cjboilerplate{Math 20}{Sum, Difference, Cofunction, Double Measure Identities}
+
+	\begin{cjsection}{Evaluate the following without using a calculator.}
+		\cjitem{\(\sin(\frac{19\pi}{12})\)}
+			\begin{cjsolution}
+				\cjwhy{\(\sin(\frac{10\pi}{12} + \frac{9\pi}{12})\)}{}
+				\cjcontinue{\(\sin(\frac{5\pi}{6} + \frac{3\pi}{4})\)}
+				\cjsubwhy{\(\sin(\frac{5\pi}{6})\cos(\frac{3\pi}{4}) + \cos(\frac{5\pi}{6})\sin(\frac{3\pi}{4})\)}{\(\sin(a + b) = \sin(a)\cos(b) + \cos(a)\sin(b)\)}
+				\cjcontinue{\((\frac{1}{2})(-\frac{\sqrt{2}}{2}) + (-\frac{\sqrt{3}}{2})(\frac{\sqrt{2}}{2})\)}
+				\cjcontinue{\(-\frac{\sqrt{2}}{4} - \frac{\sqrt{3}\sqrt{2}}{4}\)}
+				\cjcontinue{\(-\frac{\sqrt{2}}{4} - \frac{\sqrt{6}}{4}\)}
+				\cjfa{\(-\frac{\sqrt{2} + \sqrt{6}}{4}\)}
+			\end{cjsolution}
+
+		\cjitem{\(\cos(33\degree)\cos(27\degree) - \sin(33\degree)\sin(27\degree)\)}
+			\begin{cjsolution}
+				\cjwhy{\(\cos(33\degree + 27\degree)\)}{\(\cos(a + b) = \cos(a)\cos(b) - \sin(a)\sin(b)\)}
+				\cjcontinue{\(\cos(60\degree)\)}
+				\cjfa{\(\frac{1}{2}\)}
+			\end{cjsolution}
+	\end{cjsection}
+
+	\begin{cjsection}{If \(\cot(\theta) = -\frac{5}{12}\) and \(\theta \in (-\frac{\pi}{2}, 0)\), find \(\cos(\theta + \frac{\pi}{3})\).}
+		\begin{cjsolution}
+			\cjwhy{\(O = -12, A = 5\)}{\(\cot(\theta) = \frac{A}{O}\), since \(\theta \in (-\frac{\pi}{2}, 0)\), \(O < 0\) and \(A > 0\)}
+			\cjsubwhy{\(H = \sqrt{{(-12)}^2 + 5^2}\)}{\(H = \sqrt{O^2 + A^2}\)}
+			\cjcontinue{\(H = \sqrt{144 + 25}\)}
+			\cjcontinue{\(H = \sqrt{169}\)}
+			\cjcontinue{\(H = 13\)}
+			\cjwhy{\(\cos(\theta + \frac{\pi}{3}) = \cos(\theta)\cos(\frac{\pi}{3}) - \sin(\theta)\sin(\frac{\pi}{3})\)}{\(\cos(a + b) = \cos(a)\cos(b) - \sin(a)\sin(b)\)}
+			\cjsubwhy{\(\cos(\theta + \frac{\pi}{3}) = \frac{5}{13}\cos(\frac{\pi}{3}) - \sin(\theta)\sin(\frac{\pi}{3})\)}{\(\cos(\theta) = \frac{A}{H}\)}
+			\cjsubwhy{\(\cos(\theta + \frac{\pi}{3}) = \frac{5}{13}\cos(\frac{\pi}{3}) + \frac{12}{13}\sin(\frac{\pi}{3})\)}{\(\sin(\theta) = \frac{O}{H}\)}
+			\cjcontinue{\(\cos(\theta + \frac{\pi}{3}) = (\frac{5}{13})(\frac{1}{2}) + (\frac{12}{13})(\frac{\sqrt{3}}{2})\)}
+			\cjcontinue{\(\cos(\theta + \frac{\pi}{3}) = \frac{5}{26} + \frac{12\sqrt{3}}{26}\)}
+			\cjcontinue{\(\cos(\theta + \frac{\pi}{3}) = \frac{5 + 12\sqrt{3}}{26}\)}
+		\end{cjsolution}
+	\end{cjsection}
+\end{document}
