@@ -16,3 +16,11 @@ Solutions for Math 20.
 	- [1.6 - Conics (Parabola and Ellipse)](1/6/solution.pdf)
 	- [1.7 - Conics (Hyperbola), Systems of Linear Equations](1/7/solution.pdf)
 	- [1.8 - Linear Inequalities System, Nonlinear Systems](1/8/solution.pdf)
+- Unit 2
+	- [2.1 - Functions, Graphs, Symmetry](2/1/solution.pdf)
+	- [2.2 - Some Types of Functions, Operations](2/2/solution.pdf)
+- Unit 3
+	- [3.1 - The Point Function and Circular Functions](3/1/solution.pdf)
+	- [3.2 - Angles and Their Measure, Trigonometric Functions of Angles](3/2/solution.pdf)
+	- [3.3 - Graphs of Circular Functions](3/3/solution.pdf)
+	- [3.4 - Fundamental Identities](3/4/solution.pdf)
