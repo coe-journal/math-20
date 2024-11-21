@@ -24,5 +24,65 @@
 				\cjcontinue{\(\text{sec}(x) = -\frac{5}{3}\)}
 				\cjcontinue{\(\text{csc}(x) = -\frac{5}{4}\)}
 			\end{cjsolution}
+
+		\cjitem{Prove the following identities.}
+			\cjsubitem{\(\cos^2(\theta) = \frac{\cot^2(\theta)}{1 + \cot^2(\theta)}\)}
+				\begin{cjsolution}
+					\cjwhy{\(\cos^2(\theta) = \frac{\cot^2(\theta)}{\csc^2(\theta)}\)}{\(\csc^2(\theta) = 1 + \cot^2(\theta)\)}
+					\cjsubwhy{\(\cos^2(\theta) = \frac{\frac{\cos^2(\theta)}{\sin^2(\theta)}}{\csc^2(\theta)}\)}{\(\cot(\theta) = \frac{\cos(\theta)}{\sin(\theta)}\)}
+					\cjsubwhy{\(\cos^2(\theta) = \frac{\frac{\cos^2(\theta)}{\sin^2(\theta)}}{\frac{1}{\sin^2(\theta)}}\)}{\(\csc(\theta) = \frac{1}{\sin(\theta)}\)}
+					\cjcontinue{\(\cos^2(\theta) = \frac{\cos^2(\theta)\sin^2(\theta)}{\sin^2(\theta)}\)}
+					\cjfa{\(\cos^2(\theta) = \cos^2(\theta)\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\frac{1}{\sec(\theta) - \tan(\theta)} = \sec(\theta) + \tan(\theta)\)}
+				\begin{cjsolution}
+					\cjwhy{\(\sec(\theta) + \tan(\theta) = \frac{1}{\sec(\theta) - \tan(\theta)} \cdot \frac{\sec(\theta) + \tan(\theta)}{\sec(\theta) + \tan(\theta)}\)}{Use difference of two squares.}
+					\cjcontinue{\(\sec(\theta) + \tan(\theta) = \frac{\sec(\theta) + \tan(\theta)}{\sec^2(\theta) - \tan^2(\theta)}\)}
+					\cjsubwhy{\(\sec(\theta) + \tan(\theta) = \frac{\sec(\theta) + \tan(\theta)}{1}\)}{\(\sec^2(\theta) = 1 + \tan^2(\theta)\)}
+					\cjfa{\(\sec(\theta) + \tan(\theta) = \sec(\theta) + \tan(\theta)\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\frac{\sin(\theta)}{1 + \cos(\theta)} = \csc(\theta) - \cot(\theta)\)}
+				\begin{cjsolution}
+					\cjwhy{\(\csc(\theta) - \cot(\theta) = \frac{\sin(\theta)}{1 + \cos(\theta)} \cdot \frac{1 - \cos(\theta)}{1 - \cos(\theta)}\)}{Use difference of two squares.}
+					\cjcontinue{\(\csc(\theta) - \cot(\theta) = \frac{\sin(\theta)(1 - \cos(\theta))}{1 - \cos^2(\theta)}\)}
+					\cjsubwhy{\(\csc(\theta) - \cot(\theta) = \frac{\sin(\theta)(1 - \cos(\theta))}{\sin^2(\theta)}\)}{\(\sin^2(\theta) + \cos^2(\theta) = 1\)}
+					\cjcontinue{\(\csc(\theta) - \cot(\theta) = \frac{1 - \cos(\theta)}{\sin(\theta)}\)}
+					\cjcontinue{\(\csc(\theta) - \cot(\theta) = \frac{1}{\sin(\theta)} - \frac{\cos(\theta)}{\sin(\theta)}\)}
+					\cjsubwhy{\(\csc(\theta) - \cot(\theta) = \csc(\theta) - \frac{\cos(\theta)}{\sin(\theta)}\)}{\(\csc(\theta) = \frac{1}{\sin(\theta)}\)}
+					\cjfastep{\(\csc(\theta) - \cot(\theta) = \csc(\theta) - \cot(\theta)\)}{\(\cot(\theta) = \frac{\cos(\theta)}{\sin(\theta)}\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\frac{\cos(\theta)}{\sec(\theta) - \tan(\theta)} = 1 + \sin(\theta)\)}
+				\begin{cjsolution}
+					\cjwhy{\(1 + \sin(\theta) = \frac{\cos(\theta)}{\sec(\theta) - \tan(\theta)} \cdot \frac{\sec(\theta) + \tan(\theta)}{\sec(\theta) + \tan(\theta)}\)}{Use difference of two squares.}
+					\cjcontinue{\(1 + \sin(\theta) = \frac{\cos(\theta)(\sec(\theta) + \tan(\theta))}{\sec^2(\theta) - \tan^2(\theta)}\)}
+					\cjsubwhy{\(1 + \sin(\theta) = \frac{\cos(\theta)(\sec(\theta) + \tan(\theta))}{1}\)}{\(\sec(\theta) = 1 + \tan(\theta)\)}
+					\cjcontinue{\(1 + \sin(\theta) = \cos(\theta)(\sec(\theta) + \tan(\theta))\)}
+					\cjsubwhy{\(1 + \sin(\theta) = \cos(\theta)(\frac{1}{\cos(\theta)} + \tan(\theta))\)}{\(\sec(\theta) = \frac{1}{\cos(\theta)}\)}
+					\cjsubwhy{\(1 + \sin(\theta) = \cos(\theta)(\frac{1}{\cos(\theta)} + \frac{\sin(\theta)}{\cos(\theta)})\)}{\(\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}\)}
+					\cjfa{\(1 + \sin(\theta) = 1 + \sin(\theta)\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\frac{\sec(\theta) - \sin(\theta)\tan(\theta)}{\cot(\theta)} = \sin(\theta)\)}
+				\begin{cjsolution}
+					\cjwhy{\(\sin(\theta) = \frac{\sec(\theta) - \sin(\theta)\frac{\sin(\theta)}{\cos(\theta)}}{\cot(\theta)}\)}{\(\tan(\theta) = \frac{\tan(\theta)}{\cos(\theta)}\)}
+					\cjcontinue{\(\sin(\theta) = \frac{\sec(\theta) - \frac{\sin^2(\theta)}{\cos(\theta)}}{\cot(\theta)}\)}
+					\cjsubwhy{\(\sin(\theta) = \frac{\frac{1}{\cos(\theta)} - \frac{\sin^2(\theta)}{\cos(\theta)}}{\cot(\theta)}\)}{\(\sec(\theta) = \frac{1}{\cos(\theta)}\)}
+					\cjcontinue{\(\sin(\theta) = \frac{\frac{1 - \sin^2(\theta)}{\cos(\theta)}}{\cot(\theta)}\)}
+					\cjsubwhy{\(\sin(\theta) = \frac{\frac{\cos^2(\theta)}{\cos(\theta)}}{\cot(\theta)}\)}{\(\sin^2(\theta) + \cos^2(\theta) = 1\)}
+					\cjcontinue{\(\sin(\theta) = \frac{\cos(\theta)}{\cot(\theta)}\)}
+					\cjsubwhy{\(\sin(\theta) = \frac{\cos(\theta)}{\frac{\cos(\theta)}{\sin(\theta)}}\)}{\(\cot(\theta) = \frac{\cos(\theta)}{\sin(\theta)}\)}
+					\cjfa{\(\sin(\theta) = \sin(\theta)\)}
+				\end{cjsolution}
+
+			\cjsubitem{\(\cos^4(\theta) - \sin^4(\theta) = 2\cos^2(\theta) - 1\)}
+				\begin{cjsolution}
+					\cjwhy{\(2\cos^2(\theta) - 1 = (\cos^2(\theta) - \sin^2(\theta))(\cos^2(\theta) + \sin^2(\theta))\)}{Factor using difference of two squares.}
+					\cjsubwhy{\(2\cos^2(\theta) - 1 = (\cos^2(\theta) - \sin^2(\theta))(1)\)}{\(\sin^2(\theta) + \cos^2(\theta) = 1\)}
+					\cjcontinue{\(2\cos^2(\theta) - 1 = \cos^2(\theta) - \sin^2(\theta)\)}
+					\cjfastep{\(2\cos^2(\theta) - 1 = 2\cos^2(\theta) - 1\)}{\(\cos^2(\theta) - \sin^2(\theta) = 2\cos^2(\theta) - 1\)}
+				\end{cjsolution}
 	\end{cjsection}
 \end{document}
