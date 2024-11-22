@@ -30,9 +30,11 @@
 			\end{cjsolution}
 	\end{cjsection}
 
+
+
 	\begin{cjsection}{If \(\cot(\theta) = -\frac{5}{12}\) and \(\theta \in (-\frac{\pi}{2}, 0)\), find \(\cos(\theta + \frac{\pi}{3})\).}
 		\begin{cjsolution}
-			\cjwhy{\(O = -12, A = 5\)}{\(\cot(\theta) = \frac{A}{O}\), since \(\theta \in (-\frac{\pi}{2}, 0)\), \(O < 0\) and \(A > 0\)}
+			\cjwhy{\(O = -12, A = 5\)}{\(\cot(\theta) = \frac{A}{O}\), and since \(\theta \in (-\frac{\pi}{2}, 0)\), we are in QIV. Therefore, \(O < 0\) and \(A > 0\).}
 			\cjsubwhy{\(H = \sqrt{{(-12)}^2 + 5^2}\)}{\(H = \sqrt{O^2 + A^2}\)}
 			\cjcontinue{\(H = \sqrt{144 + 25}\)}
 			\cjcontinue{\(H = \sqrt{169}\)}
@@ -44,5 +46,40 @@
 			\cjcontinue{\(\cos(\theta + \frac{\pi}{3}) = \frac{5}{26} + \frac{12\sqrt{3}}{26}\)}
 			\cjcontinue{\(\cos(\theta + \frac{\pi}{3}) = \frac{5 + 12\sqrt{3}}{26}\)}
 		\end{cjsolution}
+	\end{cjsection}
+
+
+
+	\begin{cjsection}{Given \(\cos(\alpha) = \frac{3}{5}\) where \(\alpha\) lies in the interval \((\frac{\pi}{2}, 2\pi)\), find the following.}
+		\cjitem{\(\sin(2\alpha)\)}
+			\begin{cjsolution}
+				\cjwhy{\(A = 3, H = 5\)}{\(\cos(\theta) = \frac{A}{H}\), and since \(\cos(\alpha) > 0\) and \(\alpha \in (\frac{\pi}{2}, 2\pi)\), we are in QIV. Therefore, \(O < 0\) and \(A > 0\).}
+				\cjsubwhy{\(O = -\sqrt{5^2 - 3^2}\)}{From \(H = \sqrt{A^2 + O^2}\), we can derive \(O = \pm \sqrt{H^2 - A^2}\). Remember that in this case, \(A > 0\).}
+				\cjcontinue{\(O = -\sqrt{25 - 9}\)}
+				\cjcontinue{\(O = -\sqrt{16}\)}
+				\cjcontinue{\(O = -4\)}
+				\cjsubwhy{\(\sin(\alpha) = -\frac{4}{5}\)}{\(\sin(\theta) = \frac{O}{H}\)}
+				\cjwhy{\(\sin(2\alpha) = 2(-\frac{4}{5})(\frac{3}{5})\)}{\(\sin(2\theta) = 2\sin(\theta)\cos(\theta)\)}
+				\cjcontinue{\(\sin(2\alpha) = 2(-\frac{12}{25})\)}
+				\cjfa{\(\sin(2\alpha) = -\frac{24}{25}\)}
+			\end{cjsolution}
+
+		\cjitem{\(\sin(3\alpha)\)}
+			\begin{cjsolution}
+				\cjwhy{\(\cos(2\alpha) = {(\frac{3}{5})}^2 - {(-\frac{4}{5})^2}\)}{\(\cos(2\theta) = \cos^2(\theta) - \sin^2(\theta)\)}
+				\cjcontinue{\(\cos(2\alpha) = \frac{9}{25} - \frac{16}{25}\)}
+				\cjcontinue{\(\cos(2\alpha) = -\frac{7}{25}\)}
+				\cjwhy{\(\sin(3\alpha) = \sin(\alpha + 2\alpha)\)}{}
+				\cjsubwhy{\(\sin(\alpha + 2\alpha) = (-\frac{4}{5})(-\frac{7}{25}) + (\frac{3}{5})(-\frac{24}{25})\)}{\(\sin(a + b) = \sin(a)\cos(b) + \cos(a)\sin(b)\)}
+				\cjcontinue{\(\sin(\alpha + 2\alpha) = \frac{28}{125} - \frac{72}{125}\)}
+				\cjcontinue{\(\sin(\alpha + 2\alpha) = \frac{44}{125}\)}
+				\cjfa{\(\sin(3\alpha) = \frac{44}{125}\)}
+			\end{cjsolution}
+	\end{cjsection}
+
+
+
+	\begin{cjsection}{Establish the following identities.}
+		\cjitem{}
 	\end{cjsection}
 \end{document}
