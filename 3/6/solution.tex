@@ -66,4 +66,44 @@
 				\cjfa{\(\sin(3x)\cos(2x) = \frac{\sin(5x) + \sin(x)}{2}\)}
 			\end{cjsolution}
 	\end{cjsection}
+
+
+
+	\begin{cjsection}{Establish the following identities.}
+		\cjitem{\(\frac{\cos(3x) + \cos(x)}{\sin(3x) + \sin(x)} = \frac{\cot(x) - \tan(x)}{2}\)}
+			\begin{cjsolution}
+				\cjwhy{\(\frac{\cot(x) - \tan(x)}{2} = \frac{2\cos(\frac{3x + x}{2})\cos(\frac{3x - x}{2})}{\sin(3x) + \sin(x)}\)}{\(\cos(a) + \cos(b) = 2\cos(\frac{a + b}{2})\cos(\frac{a - b}{2})\)}
+				\cjcontinue{\(\frac{\cot(x) - \tan(x)}{2} = \frac{2\cos(\frac{4x}{2})\cos(\frac{2x}{2})}{\sin(3x) + \sin(x)}\)}
+				\cjcontinue{\(\frac{\cot(x) - \tan(x)}{2} = \frac{2\cos(2x)\cos(x)}{\sin(3x) + \sin(x)}\)}
+				\cjsubwhy{\(\frac{\cot(x) - \tan(x)}{2} = \frac{2\cos(2x)\cos(x)}{2\sin(\frac{3x + x}{2})\cos(\frac{3x - x}{2})}\)}{\(\sin(a) + \sin(b) = 2\sin(\frac{a + b}{2})\cos(\frac{a - b}{2})\)}
+				\cjcontinue{\(\frac{\cot(x) - \tan(x)}{2} = \frac{2\cos(2x)\cos(x)}{2\sin(\frac{4x}{2})\cos(\frac{2x}{2})}\)}
+				\cjcontinue{\(\frac{\cot(x) - \tan(x)}{2} = \frac{2\cos(2x)\cos(x)}{2\sin(2x)\cos(x)}\)}
+				\cjcontinue{\(\frac{\cot(x) - \tan(x)}{2} = \frac{2\cos(2x)}{2\sin(2x)}\)}
+				\cjsubwhy{\(\frac{\cot(x) - \tan(x)}{2} = \frac{2(\cos^2(x) - \sin^2(x))}{2\sin(2x)}\)}{\(\cos(2\theta) = \cos^2(\theta) - \sin^2(\theta)\)}
+				\cjsubwhy{\(\frac{\cot(x) - \tan(x)}{2} = \frac{2(\cos^2(x) - \sin^2(x))}{2(2\sin(x)\cos(x))}\)}{\(\sin(2\theta) = 2\sin(\theta)\cos(\theta)\)}
+				\cjcontinue{\(\frac{\cot(x) - \tan(x)}{2} = \frac{\cos^2(x) - \sin^2(x)}{2\sin(x)\cos(x)}\)}
+				\cjcontinue{\(\frac{\cot(x) - \tan(x)}{2} = \frac{1}{2}(\frac{\cos^2(x) - \sin^2(x)}{\sin(x)\cos(x)})\)}
+				\cjcontinue{\(\frac{\cot(x) - \tan(x)}{2} = \frac{1}{2}(\frac{\cos^2(x)}{\sin(x)\cos(x)} - \frac{\sin^2(x)}{\sin(x)\cos(x)})\)}
+				\cjcontinue{\(\frac{\cot(x) - \tan(x)}{2} = \frac{1}{2}(\frac{\cos(x)}{\sin(x)} - \frac{\sin(x)}{\cos(x)})\)}
+				\cjsubwhy{\(\frac{\cot(x) - \tan(x)}{2} = \frac{1}{2}(\cot(x) - \frac{\sin(x)}{\cos(x)})\)}{\(\cot(\theta) = \frac{\cos(\theta)}{\sin(\theta)}\)}
+				\cjsubwhy{\(\frac{\cot(x) - \tan(x)}{2} = \frac{1}{2}(\cot(x) - \tan(x))\)}{\(\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}\)}
+				\cjfa{\(\frac{\cot(x) - \tan(x)}{2} = \frac{\cot(x) - \tan(x)}{2}\)}
+			\end{cjsolution}
+
+		\cjitem{\(2\sin^2(\frac{x}{2}) + \tan(\frac{x}{2}) = \frac{1 + \sin(x)}{\csc(x) + \cot(x)}\)}
+			\begin{cjsolution}
+				\cjwhy{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = 2\sin^2(\frac{x}{2}) + \frac{\sin(x)}{1 + \cos(x)}\)}{\(\tan(\frac{\theta}{2}) = \frac{\sin(\theta)}{1 + \cos(\theta)}\)}
+				\cjwhy{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = 2(\frac{1 - \cos(x)}{2}) + \frac{\sin(x)}{1 + \cos(x)}\)}{\(\sin(\frac{\theta}{2}) = \pm \sqrt{\frac{1 - \cos(\theta)}{2}}\)}
+				\cjcontinue{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = 1 - \cos(x) + \frac{\sin(x)}{1 + \cos(x)}\)}
+				\cjcontinue{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = \frac{(1 - \cos(x))(1 + \cos(x))}{1 + \cos(x)} + \frac{\sin(x)}{1 + \cos(x)}\)}
+				\cjsubwhy{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = \frac{1 - \cos^2(x)}{1 + \cos(x)} + \frac{\sin(x)}{1 + \cos(x)}\)}{Factor using difference of two squares.}
+				\cjsubwhy{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = \frac{\sin^2(x)}{1 + \cos(x)} + \frac{\sin(x)}{1 + \cos(x)}\)}{\(\sin^2(\theta) + \cos^2(\theta) = 1\)}
+				\cjcontinue{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = \frac{\sin^2(x) + \sin(x)}{1 + \cos(x)}\)}
+				\cjcontinue{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = \frac{\sin(x)(1 + \sin(x))}{1 + \cos(x)}\)}
+				\cjcontinue{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = \frac{1 + \sin(x)}{\frac{1 + \cos(x)}{\sin(x)}}\)}
+				\cjcontinue{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = \frac{1 + \sin(x)}{\frac{1}{\sin(x)} + \frac{\cos(x)}{\sin(x)}}\)}
+				\cjsubwhy{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = \frac{1 + \sin(x)}{\csc(x) + \frac{\cos(x)}{\sin(x)}}\)}{\(\csc(\theta) = \frac{1}{\sin(\theta)}\)}
+				\cjfastep{\(\frac{1 + \sin(x)}{\csc(x) + \cot(x)} = \frac{1 + \sin(x)}{\csc(x) + \cot(x)}\)}{\(\cot(\theta) = \frac{\cos(\theta)}{\sin(\theta)}\)}
+			\end{cjsolution}
+	\end{cjsection}
 \end{document}
