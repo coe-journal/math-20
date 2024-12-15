@@ -24,3 +24,5 @@ Solutions for Math 20.
 	- [3.2 - Angles and Their Measure, Trigonometric Functions of Angles](3/2/solution.pdf)
 	- [3.3 - Graphs of Circular Functions](3/3/solution.pdf)
 	- [3.4 - Fundamental Identities](3/4/solution.pdf)
+	- [3.5 - Sum, Difference, Cofunction, Double Measure Identities](3/5/solution.pdf)
+	- [3.6 - Half-Angle, Product-to-Sum, Sum-to-Product Identities](3/6/solution.pdf)
